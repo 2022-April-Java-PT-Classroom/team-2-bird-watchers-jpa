@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Home</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="/">Home</a></li>|
                 <li><a href="/about-us">About Us</a></li>|
-                <li><a href="/country">Countries</a></li>
+                <li><a href="/countries">Countries</a></li>
             </ul>
         </nav>
         <h1>Welcome</h1>
@@ -34,6 +34,28 @@
             <li>Mauris accumsan orci et mauris pharetra dignissim.</li>
             <li>Proin interdum turpis vel laoreet cursus.</li>
         </ul>
+        <div class="y-separation"></div>
+
+        <h1><u>Countries</u></h1>
+
+        <div class="y-separation"></div>
+        <div class="y-separation">
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>ID</th>
+                    <th>Country</th>
+                    <th>Region</th>
+                    <th>Habitat</th>
+                </tr>
+                <tr th:each="country :${countries}">
+                    <td th:text="${country.id}"></td>
+                    <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
+                    <td th:text="${country.region}"></td>
+                    <td th:text="${country.habitat}"></td>
+
+                </tr>
+            </table>
+        </div>
     </main>
 
     <footer>

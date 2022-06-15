@@ -5,32 +5,36 @@
  }
 
 Body {
-    margin: 0 50px;
+    margin: 50px auto;
+    max-width: 1020px;
+
 }
 
+header, main, footer {
+ margin: 0 50px;
+}
 
-
-/*-------end nav------------*/
+/*-------nav------------*/
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
 nav a{
-    text-decoration:none;
-    color: #1a2b8d;
-    font-weight:600;
+       font-weight:600;
 }
 
-nav a:hover{
-    color: #c03;
+nav {
+    margin: 0 0 40px 0;
 }
+
 /*-------end nav------------*/
 
 /*-------main------------*/
 main  img{
      margin: 10px;
 }
+
 /*-------end main----------*/
 
 /*-------footer------------*/
@@ -53,4 +57,13 @@ y-separation{
 
 x-separation{
     margin:0 30px ;
+}
+
+a{
+    text-decoration:none;
+    color: #1a2b8d;
+}
+
+a:hover{
+    color: #c03;
 }

@@ -9,7 +9,7 @@ import org.wecancodeit.birdwatcher.repo.CountryRepository;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/country")
+@RequestMapping("/countries")
 public class CountryController {
 
     @Resource
