@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Country</title>
 </head>
 <body>
@@ -12,14 +12,21 @@
         <ul>
             <li><a href="/">Home</a></li>|
             <li><a href="/about-us">About Us</a></li>|
-            <li><a href="/country">Countries</a></li>
+            <li><a href="/countries">Countries</a></li>
         </ul>
     </nav>
+
+    <h1><u>Country details</u></h1>
 
 </header>
 
 <main>
-    <!--here-->
+    <ul>
+        <li th:text="'Id: '+ ${country.id}"></li>
+        <li th:text="'Country: '+ ${country.countryName}"></li>
+        <li th:text="'Region: '+ ${country.region}"></li>
+        <li th:text="'Habitat: '+ ${country.habitat}"></li>
+    </ul>
 </main>
 
 <footer>

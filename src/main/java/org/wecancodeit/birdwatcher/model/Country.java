@@ -1,12 +1,12 @@
 package org.wecancodeit.birdwatcher.model;
 
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Country {
-//    @javax.persistence.Id
-//    @Column(name = "id", nullable = false)
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
