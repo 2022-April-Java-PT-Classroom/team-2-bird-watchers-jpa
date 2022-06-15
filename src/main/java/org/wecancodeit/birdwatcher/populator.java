@@ -18,9 +18,11 @@ public class populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         Country countryOne = new Country("USA", "North America", "Mountains");
+
         Country countryTwo= new Country("Canada", "North America", "Deep Forest");
 
         countryStorage.save(countryOne);
         countryStorage.save(countryTwo);
+
     }
 }

@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 
 @Controller
 @RequestMapping("/countries")
+
 public class CountryController {
 
     @Resource

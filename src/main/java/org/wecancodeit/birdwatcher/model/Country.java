@@ -1,15 +1,27 @@
 package org.wecancodeit.birdwatcher.model;
 
+
 import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.util.Objects;
 
 @Entity
 public class Country {
-//    @javax.persistence.Id
-//    @Column(name = "id", nullable = false)
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+
+    @javax.persistence.Id
+    @Column(name = "id", nullable = false)
+    private Long id;
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private String countryName;
     private String region;
