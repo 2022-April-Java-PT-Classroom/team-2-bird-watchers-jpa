@@ -19,7 +19,6 @@ public class Country {
 
     @javax.persistence.Id
     @Column(name = "id", nullable = false)
-    private Long id;
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
