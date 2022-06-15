@@ -2,42 +2,65 @@
 <html xmlns:th="http://www.thymleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Home</title>
 </head>
-<nav>
-
-    <a href="#aboutUs">About Us</a>
-    <a href="#country">Countries</a>
-
-
-</nav>
-
-<header>
-
-    <h1>Welcome</h1>
-</header>
 <body>
-<h1>What is Bird Watching?</h1>
+    <header>
+        <nav class="center">
+            <ul>
+                <li><a href="/">Home</a></li>|
+                <li><a href="/about-us">About Us</a></li>|
+                <li><a href="/countries">Countries</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome</h1>
+    </header>
 
-<ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    <li>Maecenas vel risus ut nunc rutrum consectetur.</li>
-    <li>Integer ac neque tristique diam ullamcorper pharetra.</li>
+    <main>
+        <h1>What is Bird Watching?</h1>
 
-</ul>
-<main>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Maecenas vel risus ut nunc rutrum consectetur.</li>
+            <li>Integer ac neque tristique diam ullamcorper pharetra.</li>
+        </ul>
 
-    <h2>What Can We Do For You?</h2>
+        <h2>What Can We Do For You?</h2>
 
-    <ul>
+        <ul>
+            <li>Ut sed sem sit amet elit eleifend maximus sed et augue.</li>
+            <li>Mauris accumsan orci et mauris pharetra dignissim.</li>
+            <li>Proin interdum turpis vel laoreet cursus.</li>
+        </ul>
+        <div class="y-separation"></div>
 
-        <li>Ut sed sem sit amet elit eleifend maximus sed et augue.</li>
-        <li>Mauris accumsan orci et mauris pharetra dignissim.</li>
-        <li>Proin interdum turpis vel laoreet cursus.</li>
-    </ul>
+        <h1><u>Countries</u></h1>
 
+        <div class="y-separation"></div>
+        <div class="y-separation">
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>ID</th>
+                    <th>Country</th>
+                    <th>Region</th>
+                    <th>Habitat</th>
+                </tr>
+                <tr th:each="country :${countries}">
+                    <td th:text="${country.id}"></td>
+                    <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
+                    <td th:text="${country.region}"></td>
+                    <td th:text="${country.habitat}"></td>
 
+                </tr>
+            </table>
+        </div>
+    </main>
 
-</main>
+    <footer>
+        <p>©2022 Copyright WCCI Team 2</p>
+    </footer>
+
 </body>
 </html>
