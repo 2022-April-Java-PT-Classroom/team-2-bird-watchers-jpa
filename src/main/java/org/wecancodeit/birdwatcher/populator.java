@@ -21,8 +21,14 @@ public class populator implements CommandLineRunner {
 
         Country countryTwo= new Country("Thailand", "Southern", "Tropical");
 
+        Country countryThree= new Country("India", "Northern", "Wetlands");
+
+        Country countryFour= new Country("India", "Southern", "Grasslands");
+
         countryStorage.save(countryOne);
         countryStorage.save(countryTwo);
+        countryStorage.save(countryThree);
+        countryStorage.save(countryFour);
 
     }
 }
