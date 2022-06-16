@@ -17,7 +17,7 @@ public class populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-       Country countryOne = new Country("Thailand", "Central", "Forest");
+        Country countryOne = new Country("Thailand", "Central", "Forest");
 
         Country countryTwo= new Country("Thailand", "Southern", "Tropical");
 

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/style.css">
     <title>Countries</title>
 </head>
-<body>
+
 <header>
     <nav class="center">
         <ul>
@@ -21,6 +21,9 @@
 
 </header>
 
+<body>
+
+
 <main>
     <div class="y-separation"></div>
     <div class="y-separation">
@@ -34,8 +37,11 @@
             <tr th:each="country :${countries}">
                 <td th:text="${country.id}"></td>
                 <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
-                <td th:text="${country.region}"></td>
+                <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.region}"></a></td>
                 <td th:text="${country.habitat}"></td>
+
+
+
 
             </tr>
         </table>
