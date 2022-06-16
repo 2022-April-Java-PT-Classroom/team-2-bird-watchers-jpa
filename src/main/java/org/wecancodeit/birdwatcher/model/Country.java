@@ -16,12 +16,11 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @javax.persistence.Id
+    @Column(name = "id", nullable = false)
 
-//    @javax.persistence.Id
-//    @Column(name = "id", nullable = false)
-//    private Long id;
-//
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
 
     private String countryName;
     private String region;
