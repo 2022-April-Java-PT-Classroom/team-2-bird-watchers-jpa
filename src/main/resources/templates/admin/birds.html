@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/style.css">
-        <title>Country</title>
+        <title>Birds</title>
     </head>
     <body>
         <header>
@@ -16,33 +16,27 @@
                     <li><a href="/regions">Regions</a></li>|
                     <li><a href="/birds">Birds</a></li>|
                     <li><a href="/users">Users</a></li>|
-                    <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                    <li>
-                        <a href="/admin">Administration</a>
-                        <div class="sub-menu">
-                            <div class="sub-nav"><a href="/admin/countries">Manage Countries</a></div>
-                            <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>
-                            <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>
-                            <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>
 
+                    <li>
+                        <div class="pass-sub-menu">
+                            <div class="sub-menu">
+                                <div class="sub-nav"><a href="/admin"><u>Administration</u></a></div>
+                                <div class="sub-nav"><a href="/admin/countries">Manage Countries</a></div>
+                                <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>
+                                <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>
+                                <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>
+
+                            </div>
                         </div>
                     </li>
                 </ul>
             </nav>
-
-            <h1><u>Country details</u></h1>
+            <h1><u>Birds</u></h1>
 
         </header>
-
         <main>
-            <ul>
-                <li th:text="'Id: '+ ${country.id}"></li>
-                <li th:text="'Country: '+ ${country.countryName}"></li>
-                <li th:text="'Region: '+ ${country.region}"></li>
-                <li th:text="'Habitat: '+ ${country.habitat}"></li>
-            </ul>
+            <!--main-->
         </main>
-
         <footer>
             <p>©2022 Copyright WCCI Team 2</p>
         </footer>

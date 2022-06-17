@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/style.css">
-        <title>Countries</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Birds</title>
+</head>
+<body>
     <header>
         <nav class="center">
             <ul>
@@ -29,36 +29,15 @@
                 </li>
             </ul>
         </nav>
-        <h1><u>Countries</u></h1>
-
-        <div class="y-separation"></div>
+        <h1><u>Users</u></h1>
 
     </header>
-
     <main>
-        <div class="y-separation"></div>
-        <div class="y-separation">
-            <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                    <th>ID</th>
-                    <th>Country</th>
-                    <th>Region</th>
-                    <th>Habitat</th>
-                </tr>
-                <tr th:each="country :${countries}">
-                    <td th:text="${country.id}"></td>
-                    <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
-                    <td th:text="${country.region}"></td>
-                    <td th:text="${country.habitat}"></td>
 
-                </tr>
-            </table>
-        </div>
+        <!--main-->
     </main>
-
     <footer>
         <p>©2022 Copyright WCCI Team 2</p>
     </footer>
-
-    </body>
+</body>
 </html>
