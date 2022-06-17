@@ -1,82 +1,193 @@
-* {
-  font-family: Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 16px;
-  color: #000;
- }
-
-Body {
-    margin: 50px auto;
-    max-width: 1020px;
-
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-header, main, footer {
- margin: 0 50px;
-}
-
-/*-------nav------------*/
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a{
-       font-weight:600;
-}
-
-nav {
-    margin: 0 0 40px 0;
-}
-
-.pass-sub-menu{
-
-    width:200px;
-}
-
-.sub-menu{
-    opacity: 0.5;
-    position: relative;
-    top: 10px;
-    left: 10px;
-    width:200px;
-    background:#ddd;
-}
-/*-------end nav------------*/
-
-/*-------main------------*/
-main  img{
-     margin: 10px;
-}
-
-/*-------end main----------*/
-
-/*-------footer------------*/
-footer{
-    margin:50px 0 20px;
-}
-
-footer p {
-    font-size:12px;
-}
-/*-------end footer------------*/
-
-.center{
-    text-align: center;
-}
-
-y-separation{
-    margin:30px 0;
-}
-
-x-separation{
-    margin:0 30px ;
-}
+/* ---------------- Global Classes ---------------*/
 
 a{
-    text-decoration:none;
-    color: #1a2b8d;
+    text-decoration: none;
 }
 
-a:hover{
-    color: #c03;
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+}
+
+h2{
+     font-family: 'Roboto', sans-serif;
+}
+
+h3{
+     font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ------x------- Global Classes -------x-------*/
+
+/* --------------- navbar ----------------- */
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: #FFC100;
+}
+
+.nav .nav-items .nav-link:hover a{
+    color:white;
+}
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav .social{
+    padding: .4rem 0;
+}
+
+.nav .social{
+    padding: 0.2rem;
+}
+
+.nav .social i:hover{
+    color: #FFEAAE;
+}
+
+/* -------x------- navbar ---------x------- */
+
+/*----------------main content-------------*/
+
+/*-------------site title--------------*/
+main .site-title{
+    background: url('./images/sunshiney-indonesian-valley-filled-with-rice-paddies.jpg');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+
+}
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: black;
+
+}
+
+main .site-title h1, h3{
+    margin: .3rem;
+}
+main .site-title .btn{
+    margin: 1.8rem;
+    background: #FFC100;
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: white;
+}
+
+/*----x---------site title--------------*/
+.box-container{
+	display:flex;
+	justify-content: space-around
+}
+.box-1,.box-2,.box-3{
+	width: 300px;
+	height:320px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	margin: 0px 20px;
+}
+.box-1 span,
+.box-2 span,
+.box-3 span{
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	background-color:#ffffff;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	font-family: calibri;
+	font-weight: bold;
+}
+.box-1 p:nth-child(2),
+.box-2 p:nth-child(2),
+.box-3 p:nth-child(2){
+	color:#979797;
+	font-family: calibri;
+	font-size: 23px;
+	line-height:0px;
+
+}
+.box-1 p:nth-child(3),
+.box-2 p:nth-child(3),
+.box-3 p:nth-child(3){
+	font-family: calibri;
+	color:#8F8F8F;
+	text-align:center;
+	width: 230px;
+	margin:0px 0px 20px 0px;
+
+}
+.box-1 button,
+.box-2 button,
+.box-3 button{
+	width:100px;
+	height:30px;
+	background-color:#FFFFFF;
+	border:none;
+	outline: none;
+	border-radius:5px;
+}
+/*-------x---------main content-------------*/
