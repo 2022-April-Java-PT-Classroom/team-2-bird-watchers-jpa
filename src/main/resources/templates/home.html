@@ -6,90 +6,75 @@
     <link rel="stylesheet" href="/style.css">
     <title>Home</title>
 </head>
-
+<body>
 <header>
     <nav class="center">
         <ul>
             <li><a href="/">Home</a></li>|
             <li><a href="/about-us">About Us</a></li>|
-            <li><a href="/countries">Countries</a></li>
+            <li><a href="/countries">Countries</a></li>|
+            <li><a href="/regions">Regions</a></li>|
+            <li><a href="/birds">Birds</a></li>|
+            <li><a href="/users">Users</a></li>|
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li>
+                <a href="/admin">Administration</a>
+                <div class="sub-menu">
+                    <div class="sub-nav"><a href="/admin/countries">Manage Countries</a></div>
+                    <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>
+                    <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>
+                    <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>
+
+                </div>
+            </li>
         </ul>
     </nav>
     <h1>Welcome</h1>
 </header>
 
-<body>
-<<<<<<< HEAD
-    <header>
-        <nav class="center">
-            <ul>
-                <li><a href="/">Home</a></li>|
-                <li><a href="/about-us">About Us</a></li>|
-                <li><a href="/countries">Countries</a></li>|
-                <li><a href="/regions">Regions</a></li>|
-                <li><a href="/birds">Birds</a></li>|
-                <li><a href="/users">Users</a></li>|
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>
-                    <a href="/admin">Administration</a>
-                    <div class="sub-menu">
-                        <div class="sub-nav"><a href="/admin/countries">Manage Countries</a></div>
-                        <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>
-                        <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>
-                        <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>
+<main>
+    <h1>What is Bird Watching?</h1>
 
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <h1>Welcome</h1>
-    </header>
-=======
->>>>>>> abf5e6f8d04e3bd36aa6e7c231e5a169b27da64e
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Maecenas vel risus ut nunc rutrum consectetur.</li>
+        <li>Integer ac neque tristique diam ullamcorper pharetra.</li>
+    </ul>
 
-    <main>
-        <h1>What is Bird Watching?</h1>
+    <h2>What Can We Do For You?</h2>
 
-        <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Maecenas vel risus ut nunc rutrum consectetur.</li>
-            <li>Integer ac neque tristique diam ullamcorper pharetra.</li>
-        </ul>
+    <ul>
+        <li>Ut sed sem sit amet elit eleifend maximus sed et augue.</li>
+        <li>Mauris accumsan orci et mauris pharetra dignissim.</li>
+        <li>Proin interdum turpis vel laoreet cursus.</li>
+    </ul>
+    <div class="y-separation"></div>
 
-        <h2>What Can We Do For You?</h2>
+    <h1><u>Countries</u></h1>
 
-        <ul>
-            <li>Ut sed sem sit amet elit eleifend maximus sed et augue.</li>
-            <li>Mauris accumsan orci et mauris pharetra dignissim.</li>
-            <li>Proin interdum turpis vel laoreet cursus.</li>
-        </ul>
-        <div class="y-separation"></div>
+    <div class="y-separation"></div>
+    <div class="y-separation">
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <th>ID</th>
+                <th>Country</th>
+                <th>Region</th>
+                <th>Habitat</th>
+            </tr>
+            <tr th:each="country :${countries}">
+                <td th:text="${country.id}"></td>
+                <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
+                <td th:text="${country.region}"></td>
+                <td th:text="${country.habitat}"></td>
 
-        <h1><u>Countries</u></h1>
+            </tr>
+        </table>
+    </div>
+</main>
 
-        <div class="y-separation"></div>
-        <div class="y-separation">
-            <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                    <th>ID</th>
-                    <th>Country</th>
-                    <th>Region</th>
-                    <th>Habitat</th>
-                </tr>
-                <tr th:each="country :${countries}">
-                    <td th:text="${country.id}"></td>
-                    <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
-                    <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.region}"></a></td>
-                    <td th:text="${country.habitat}"></td>
-
-                </tr>
-            </table>
-        </div>
-    </main>
-
-    <footer>
-        <p>©2022 Copyright WCCI Team 2</p>
-    </footer>
+<footer>
+    <p>©2022 Copyright WCCI Team 2</p>
+</footer>
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymleaf.org">
-<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,24 +24,6 @@
                         <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>
                         <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>
                         <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>
-=======
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Countries</title>
-</head>
-
-<header>
-    <nav class="center">
-        <ul>
-            <li><a href="/">Home</a></li>|
-            <li><a href="/about-us">About Us</a></li>|
-            <li><a href="/countries">Countries</a></li>
-        </ul>
-    </nav>
-    <h1><u>Countries</u></h1>
->>>>>>> abf5e6f8d04e3bd36aa6e7c231e5a169b27da64e
 
                     </div>
                 </li>
@@ -51,8 +32,6 @@
         <h1><u>Countries</u></h1>
 
         <div class="y-separation"></div>
-
-<<<<<<< HEAD
     </header>
 
     <main>
@@ -70,38 +49,9 @@
                     <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
                     <td th:text="${country.region}"></td>
                     <td th:text="${country.habitat}"></td>
-=======
-<body>
-
-
-<main>
-    <div class="y-separation"></div>
-    <div class="y-separation">
-        <table border="1" cellspacing="0" cellpadding="5">
-            <tr>
-                <th>ID</th>
-                <th>Country</th>
-                <th>Region</th>
-                <th>Habitat</th>
-            </tr>
-            <tr th:each="country :${countries}">
-                <td th:text="${country.id}"></td>
-                <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
-                <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.region}"></a></td>
-                <td th:text="${country.habitat}"></td>
-
-
-
-
-            </tr>
-        </table>
-    </div>
-</main>
->>>>>>> abf5e6f8d04e3bd36aa6e7c231e5a169b27da64e
-
                 </tr>
-            </table>
-        </div>
+             </table>
+         </div>
     </main>
 
     <footer>
