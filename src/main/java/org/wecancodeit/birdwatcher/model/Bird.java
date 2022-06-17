@@ -37,6 +37,7 @@ public class Bird {
     }
 
     public void setId(Long id) {
+
         this.id = id;
     }
 
@@ -83,7 +84,8 @@ public class Bird {
     @Override
     public String toString() {
         return "Bird{" +
-                "birdName='" + birdName + '\'' +
+                "id=" + id +
+                ", birdName='" + birdName + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", description='" + description + '\'' +
                 '}';

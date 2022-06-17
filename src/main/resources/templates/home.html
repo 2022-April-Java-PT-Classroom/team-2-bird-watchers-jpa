@@ -6,7 +6,20 @@
     <link rel="stylesheet" href="/style.css">
     <title>Home</title>
 </head>
+
+<header>
+    <nav class="center">
+        <ul>
+            <li><a href="/">Home</a></li>|
+            <li><a href="/about-us">About Us</a></li>|
+            <li><a href="/countries">Countries</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome</h1>
+</header>
+
 <body>
+<<<<<<< HEAD
     <header>
         <nav class="center">
             <ul>
@@ -31,6 +44,8 @@
         </nav>
         <h1>Welcome</h1>
     </header>
+=======
+>>>>>>> abf5e6f8d04e3bd36aa6e7c231e5a169b27da64e
 
     <main>
         <h1>What is Bird Watching?</h1>
@@ -64,7 +79,7 @@
                 <tr th:each="country :${countries}">
                     <td th:text="${country.id}"></td>
                     <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
-                    <td th:text="${country.region}"></td>
+                    <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.region}"></a></td>
                     <td th:text="${country.habitat}"></td>
 
                 </tr>

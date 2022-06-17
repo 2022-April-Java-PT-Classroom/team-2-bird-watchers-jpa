@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymleaf.org">
+<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,23 @@
                             <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>
                             <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>
                             <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Country</title>
+</head>
+
+<header>
+    <nav class="center">
+        <ul>
+            <li><a href="/">Home</a></li>|
+            <li><a href="/about-us">About Us</a></li>|
+            <li><a href="/countries">Countries</a></li>
+        </ul>
+    </nav>
+>>>>>>> abf5e6f8d04e3bd36aa6e7c231e5a169b27da64e
 
                         </div>
                     </li>
@@ -32,7 +50,21 @@
 
             <h1><u>Country details</u></h1>
 
+<<<<<<< HEAD
         </header>
+=======
+<body>
+
+
+<main>
+    <ul>
+        <li th:text="'Id: '+ ${country.id}"></li>
+        <li th:text="'Country: '+ ${country.countryName}"></li>
+        <li th:text="'Region: '+ ${country.region}"></li>
+        <li th:text="'Habitat: '+ ${country.habitat}"></li>
+    </ul>
+</main>
+>>>>>>> abf5e6f8d04e3bd36aa6e7c231e5a169b27da64e
 
         <main>
             <ul>

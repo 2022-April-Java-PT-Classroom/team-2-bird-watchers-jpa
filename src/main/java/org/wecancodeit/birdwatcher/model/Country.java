@@ -10,16 +10,20 @@ public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private String countryName;
     private String region;
     private String habitat;
 
     public Long getId() {
+
         return id;
     }
 
     public void setId(Long id) {
+
         this.id = id;
     }
 
@@ -34,14 +38,17 @@ public class Country {
     }
 
     public String getCountryName() {
+
         return countryName;
     }
 
     public String getRegion() {
+
         return region;
     }
 
     public String getHabitat() {
+
         return habitat;
     }
 

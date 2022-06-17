@@ -8,7 +8,6 @@ public class Region {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String regionName;
     private String habitat;
 
@@ -20,19 +19,11 @@ public class Region {
         this.habitat = habitat;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getRegion() {
+    public String getRegionName() {
         return regionName;
     }
 
-    public void setRegion(String regionName) {
+    public void setRegionName(String regionName) {
         this.regionName = regionName;
     }
 
@@ -47,7 +38,8 @@ public class Region {
     @Override
     public String toString() {
         return "Region{" +
-                "region='" + regionName + '\'' +
+                "id=" + id +
+                ", regionName='" + regionName + '\'' +
                 ", habitat='" + habitat + '\'' +
                 '}';
     }
@@ -56,8 +48,8 @@ public class Region {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Region region1 = (Region) o;
-        return regionName.equals(region1.regionName) && habitat.equals(region1.habitat);
+        Region region = (Region) o;
+        return regionName.equals(region.regionName) && habitat.equals(region.habitat);
     }
 
     @Override
