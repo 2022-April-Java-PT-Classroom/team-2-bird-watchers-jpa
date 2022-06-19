@@ -294,6 +294,10 @@ main .content .img-right {
 }
 main .range {
     margin: 30px 50px 70px 50px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
 }
 
 .center{
