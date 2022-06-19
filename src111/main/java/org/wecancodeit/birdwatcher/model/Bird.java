@@ -1,7 +1,7 @@
 package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
-import java.util.*;
+import java.util.Objects;
 
 @Entity
 public class Bird {
@@ -10,15 +10,14 @@ public class Bird {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private String birdName;
     private String imageUrl;
     private String description;
-
-    @ManyToMany
-    private Collection<Country> countries;
-
-//    @ManyToMany
-//    private Collection<Region> regions;
+    private String countryName;
+    private String region;
+    private String habitat;
 
     public Long getId() {
 
@@ -34,20 +33,14 @@ public class Bird {
 
     }
 
-    public Bird(String birdName, String imageUrl, String description) {
+    public Bird(String birdName, String imageUrl, String description,
+                String countryName, String region, String habitat) {
         this.birdName = birdName;
         this.imageUrl = imageUrl;
         this.description = description;
-        this.countries =  new ArrayList<>(Arrays.asList());
-//        this.regions =  new ArrayList<>(Arrays.asList());
-    }
-
-    public void addCountry(Country country){
-        countries.add(country);
-    }
-    HashMap<Long, Country> country = new HashMap<>();
-    public Country getCountry(Long Id){
-        return country.get(Id);
+        this.countryName = countryName;
+        this.region = region;
+        this.habitat = habitat;
     }
 
     public String getBirdName() {
@@ -62,26 +55,27 @@ public class Bird {
         return description;
     }
 
-    public Collection<Country> getCountries() {
-        return countries;
+    public String getCountryName() {
+        return countryName;
     }
-//    public Collection<Region> getRegions() {
-//        return regions;
-//    }
-    public void setCountries(Collection<Country> countries) {
-        this.countries = countries;
+
+    public String getRegion() {
+        return region;
     }
-//    public void setRegions(Collection<Region> regions) {
-//        this.regions = regions;
-//    }
+
+    public String getHabitat() {
+        return habitat;
+    }
 
     @Override
     public String toString() {
         return "Bird{" +
-                "id=" + id +
-                ", birdName='" + birdName + '\'' +
+                "birdName='" + birdName + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", description='" + description + '\'' +
+                ", countryName='" + countryName + '\'' +
+                ", region='" + region + '\'' +
+                ", habitat='" + habitat + '\'' +
                 '}';
     }
 
@@ -90,12 +84,14 @@ public class Bird {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bird bird = (Bird) o;
-        return birdName.equals(bird.birdName) && imageUrl.equals(bird.imageUrl)
-                && description.equals(bird.description);
+        return birdName.equals(bird.birdName) && birdName.equals(bird.imageUrl) &&
+                birdName.equals(bird.description) && birdName.equals(bird.countryName) &&
+                region.equals(bird.region) && habitat.equals(bird.habitat);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(birdName, imageUrl, description);
+        return Objects.hash(birdName, imageUrl, description, countryName,
+                region, habitat);
     }
 }

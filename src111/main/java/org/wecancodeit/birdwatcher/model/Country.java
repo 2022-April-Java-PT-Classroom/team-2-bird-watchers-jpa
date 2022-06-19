@@ -2,21 +2,20 @@ package org.wecancodeit.birdwatcher.model;
 
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class Country extends Region{
+public class Country {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private String countryName;
     private String region;
     private String habitat;
-
-
 
     public Long getId() {
 
@@ -33,7 +32,6 @@ public class Country extends Region{
     }
 
     public Country(String countryName, String region, String habitat) {
-        super(region, habitat);
         this.countryName = countryName;
         this.region = region;
         this.habitat = habitat;
@@ -68,8 +66,7 @@ public class Country extends Region{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Country country = (Country) o;
-        return countryName.equals(country.countryName) && region.equals(country.region)
-                && habitat.equals(country.habitat);
+        return countryName.equals(country.countryName) && region.equals(country.region) && habitat.equals(country.habitat);
     }
 
     @Override

@@ -1,7 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Shrikhand);
+
+
 html, body{
-    margin: 0%;
+    margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* ---------------- Global Classes ---------------*/
@@ -10,6 +14,20 @@ a{
     text-decoration: none;
 }
 
+.logo {
+	   	font-family: "Shrikhand", sans-serif;
+    	font-size: 20px;
+    	padding:20px 0 0;
+}
+.title{
+    margin:50px 0 20px 50px;
+    font-size:20px;
+    font-weight: 600;
+    color: #777;
+}
+.content{
+    margin: 0 10px 50px 20px;
+}
 .flex-row{
     display: flex;
     flex-direction: row;
@@ -84,7 +102,9 @@ button.btn{
     display: block;
     font-family: 'Roboto', sans-serif;
 }
-
+.social-top{
+ margin: 20px 0 0;
+}
 .nav .social{
     padding: .4rem 0;
 }
@@ -102,8 +122,11 @@ button.btn{
 /*----------------main content-------------*/
 
 /*-------------site title--------------*/
+main{
+    margin: 0;
+}
 main .site-title{
-    background: url('./images/sunshiney-indonesian-valley-filled-with-rice-paddies.jpg');
+    background: url('/images/sunshiney-indonesian-valley-filled-with-rice-paddies.jpg');
     background-size: cover;
     height: 110vh;
     display: flex;
@@ -126,15 +149,18 @@ main .site-title .btn{
 }
 
 main .site-title .btn:hover{
-    background: transparent;
-    border: 1px solid var(--white);
+   /* background: transparent;*/
+    background: #999;
+    border: 1px solid white;
+    /*color: #ddd;*/
     color: white;
 }
 
 /*----x---------site title--------------*/
 .box-container{
 	display:flex;
-	justify-content: space-around
+	justify-content: space-around;
+	flex-direction: row;
 }
 .box-1,.box-2,.box-3{
 	width: 300px;
@@ -148,9 +174,69 @@ main .site-title .btn:hover{
 	flex-direction: column;
 	margin: 0px 20px;
 }
+
+.box-container-country{
+    display:flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.box-country{
+    width: 200px;
+	height:250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	margin: 0px 20px 40px;
+	}
+.box-country .heading{
+    color: #979797;
+    font-size: 23px;
+    line-height: 0px;
+}
+
+.box-country .details{
+    color: #8F8F8F;
+    text-align: center;
+    width: 230px;
+    margin: 0px 0px 20px 0px;
+}
+
+.box-country button{
+	width:100px;
+	height:30px;
+	background-color:#FFC100;
+	border:none;
+	outline: none;
+	border-radius:20px;
+	cursor:pointer;
+}
+
+.box-country button:hover{
+	background-color:#ddd;
+}
+
+.box-large{
+	width: 100%;
+	height:320px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+	align-items: center;
+	text-align: center;
+	margin: 70px 0px;
+	padding: 20px;
+
+}
+
 .box-1 span,
 .box-2 span,
-.box-3 span{
+.box-3 span {
 	width:30px;
 	height:30px;
 	border-radius:50%;
@@ -189,5 +275,51 @@ main .site-title .btn:hover{
 	border:none;
 	outline: none;
 	border-radius:5px;
+	cursor: pointer;
+}
+.fa-map-marker{
+    color: #333; /*#FFC100;*/
+}
+
+main .content .img-left {
+    margin: 0 20px 10px 0px;
+    float: left;
+}
+.clear{
+    clear:both;
+}
+main .content .img-right {
+    margin: 0 0px 10px 20px;
+    float: right;
+}
+main .range {
+    margin: 30px 50px 70px 50px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+}
+
+.center{
+    text-align:center;
+}
+.y-separation{
+    margin: 30px 0;
+}
+
+.x-separation{
+    margin: 0 30px;
 }
 /*-------x---------main content-------------*/
+
+/*-----------------footer---------------------*/
+footer {
+    background-size: cover;
+ 	box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+    margin:50px 0 -5px;
+}
+
+footer p {
+    padding:30px 0 20px 50px;
+    font-size:12px;
+}

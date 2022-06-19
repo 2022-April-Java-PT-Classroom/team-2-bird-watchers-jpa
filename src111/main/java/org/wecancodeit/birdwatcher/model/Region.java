@@ -1,79 +1,69 @@
 package org.wecancodeit.birdwatcher.model;
-
-
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class Country extends Region{
+public class Region {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private String countryName;
     private String region;
     private String habitat;
 
-
-
     public Long getId() {
-
         return id;
     }
 
     public void setId(Long id) {
-
         this.id = id;
     }
 
-    public Country(){
+    public Region(){
 
     }
 
-    public Country(String countryName, String region, String habitat) {
-        super(region, habitat);
+    public Region(String countryName, String region, String habitat) {
         this.countryName = countryName;
         this.region = region;
         this.habitat = habitat;
     }
 
     public String getCountryName() {
-
         return countryName;
     }
 
     public String getRegion() {
-
         return region;
     }
 
     public String getHabitat() {
-
         return habitat;
     }
-
     @Override
     public String toString() {
-        return "Country{" +
+        return "Region{" +
                 "countryName='" + countryName + '\'' +
                 ", region='" + region + '\'' +
                 ", habitat='" + habitat + '\'' +
                 '}';
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Country country = (Country) o;
-        return countryName.equals(country.countryName) && region.equals(country.region)
-                && habitat.equals(country.habitat);
+        Region region = (Region) o;
+        return countryName.equals(region.countryName) && region.equals(region.region) && habitat.equals(region.habitat);
     }
 
     @Override
     public int hashCode() {
+
         return Objects.hash(countryName, region, habitat);
     }
+
 }

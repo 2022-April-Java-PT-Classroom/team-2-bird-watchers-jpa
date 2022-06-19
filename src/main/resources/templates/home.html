@@ -3,142 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/aba5373111.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
     <title>Jac Enterprise</title>
 </head>
 <body>
-<!------------------Nav Bar--------------------->
+<main>
+<!--X----------------Nav Bar----------------------->
     <nav class="nav">
         <div class="nav-menu flex-row">
-            <div>
+            <div class="logo">
                 <a href="/" class="text-grey">Jac Enterprise</a>
             </div>
 
             <div>
-            <ul class="nav-items">
-            <li class="nav-link"><a href="/">Home</a></li>|
-            <li class="nav-link"><a href="/about-us">About Us</a></li>|
-            <li class="nav-link" ><a href="/countries">Countries</a></li>|
-            <li class="nav-link"><a href="/regions">Regions</a></li>|
-            <li class="nav-link"><a href="/birds">Birds</a></li>|
-
-
-<!--            <li><a href="/users">Users</a></li>|-->
-<!--            <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>-->
-<!--            <li>-->
-<!--                <a href="/admin">Administration</a>-->
-<!--                <div class="sub-menu">-->
-<!--                    <div class="sub-nav"><a href="/admin/countries">Manage Countries</a></div>-->
-<!--                    <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>-->
-<!--                    <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>-->
-<!--                    <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>-->
-
-<!--                </div>-->
-<!--            </li>-->
-             </ul>
+                <ul class="nav-items">
+                    <li class="nav-link"><a href="/">Home</a></li>
+                    <li class="nav-link"><a href="/about-us">About Us</a></li>
+                    <li class="nav-link" ><a href="/countries">Countries</a></li>
+                    <li class="nav-link"><a href="/regions">Regions</a></li>
+                    <li class="nav-link"><a href="/birds">Birds</a></li>
+                </ul>
             </div>
-            <div class="social text-gray">
+            <div class="social text-gray social-top">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
     </nav>
+
 <!--X----------------Nav Bar----------------------->
+
+
 <!------------------- Main Site Section--------------------->
 
-<main>
+        <section class="site-title">
+            <div class="site-background">
+                <h3>Tours & Travels</h3>
+                <h1>All About Birds</h1>
+                <button class="btn">Explore</button>
+            </div>
+        </section>
 
-    <section class="site-title">
-        <div class="site-background">
-            <h3>Tours & Travels</h3>
-            <h1>All About Birds</h1>
-            <button class="btn">Explore</button>
+        <!--------------Content--------------------->
+        <h2 id="explore" style="text-align:center">Explore</h2>
+        <div class="box-container">
+            <!--1------------->
+            <div class="box-1">
+                <span><i class="fa-solid fa-plane"></i></span>
+                <p class="heading">Travel</p>
+                <p class="details">In Asia</p>
+                <a href="#">
+                    <button>Learn More</button>
+                </a>
+            </div>
+            <!--2------------->
+            <div class="box-2">
+                <span><i class="fa-solid fa-mountain-city"></i></span>
+                <p class="heading">Site Seeing</p>
+                <p class="details">In Asia</p>
+                <a href="#">
+                    <button>Learn More</button>
+                </a>
+            </div>
+            <!--3------------->
+            <div class="box-3">
+<!--                <span><i class="fa-regular fa-crow"></i></span>-->
+                <span><i class="fas fa-crow"></i></span>
+                <p class="heading">Birds</p>
+                <p class="details">In Asia</p>
+                <a href="/birds">
+                    <button>Learn More</button>
+                </a>
+            </div>
         </div>
-    </section>
 
-<!--------------Content--------------------->
-    <h2 id="explore" style="text-align:center">Explore</h2>
+        <!-------------Content--------------------->
+
     <div class="box-container">
-        <!--1------------->
-        <div class="box-1">
-            <span><i class="fa-solid fa-plane"></i></span>
-            <p class="heading">Travel</p>
-            <p class="details">In Asia</p>
-            <a href="#">
-                <button>Learn More</button>
-            </a>
-        </div>
-        <!--2------------->
-        <div class="box-2">
-            <span><i class="fa-solid fa-mountain-city"></i></span>
-            <p class="heading">Site Seeing</p>
-            <p class="details">In Asia</p>
-            <a href="#">
-                <button>Learn More</button>
-            </a>
-        </div>
-        <!--3------------->
-        <div class="box-3">
-            <span><i class="fa-regular fa-crow"></i></span>
-            <p class="heading">Birds</p>
-            <p class="details">In Asia</p>
-            <a href="#">
-                <button>Learn More</button>
-            </a>
+        <div class="box-large">
+            <h1>What is Bird Watching?</h1>
+
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Maecenas vel risus ut nunc rutrum consectetur.</li>
+                <li>Integer ac neque tristique diam ullamcorper pharetra.</li>
+            </ul>
+
+            <h2>What Can We Do For You?</h2>
+
+            <ul>
+                <li>Ut sed sem sit amet elit eleifend maximus sed et augue.</li>
+                <li>Mauris accumsan orci et mauris pharetra dignissim.</li>
+                <li>Proin interdum turpis vel laoreet cursus.</li>
+            </ul>
         </div>
     </div>
-    <!-------------Content--------------------->
+
+    <div class="box-container-country">
+        <!--1------------->
+        <div class="box-country"  th:each="country :${countries}">
+            <span><i class="fa fa-map-marker"></i></span>
+            <p class="heading" th:text="${country.countryName}"></p>
+            <p class="details" th:text="${country.region}"></p>
+            <p class="details" th:text="${country.habitat}"></p>
+
+            <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
+
+        </div>
+    </div>
+
+
 </main>
 
-
-
-<!-X------------------ Main Site Section--------------------->
-<!--    <h1>Welcome</h1>-->
-<!--<main>-->
-<!--    <h1>What is Bird Watching?</h1>-->
-
-<!--    <ul>-->
-<!--        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>-->
-<!--        <li>Maecenas vel risus ut nunc rutrum consectetur.</li>-->
-<!--        <li>Integer ac neque tristique diam ullamcorper pharetra.</li>-->
-<!--    </ul>-->
-
-<!--    <h2>What Can We Do For You?</h2>-->
-
-<!--    <ul>-->
-<!--        <li>Ut sed sem sit amet elit eleifend maximus sed et augue.</li>-->
-<!--        <li>Mauris accumsan orci et mauris pharetra dignissim.</li>-->
-<!--        <li>Proin interdum turpis vel laoreet cursus.</li>-->
-<!--    </ul>-->
-<!--    <div class="y-separation"></div>-->
-
-<!--    <h1><u>Countries</u></h1>-->
-
-<!--    <div class="y-separation"></div>-->
-<!--    <div class="y-separation">-->
-<!--        <table border="1" cellspacing="0" cellpadding="5">-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>Country</th>-->
-<!--                <th>Region</th>-->
-<!--                <th>Habitat</th>-->
-<!--            </tr>-->
-<!--            <tr th:each="country :${countries}">-->
-<!--                <td th:text="${country.id}"></td>-->
-<!--                <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>-->
-<!--                <td th:text="${country.region}"></td>-->
-<!--                <td th:text="${country.habitat}"></td>-->
-
-<!--            </tr>-->
-<!--        </table>-->
-<!--    </div>-->
-<!--</main>-->
-
-<footer>
-    <p>©2022 Copyright WCCI Team 2</p>
-</footer>
+    <footer>
+        <p>©2022 Copyright WCCI Team 2</p>
+    </footer>
 
 </body>
 </html>
