@@ -20,9 +20,8 @@ public class CountryController {
         return "countries";
     }
     @GetMapping("/{id}")
-    public String findOneCountry(Model model, Model modelAllCon,@PathVariable Long id){
+    public String findOneCountry(Model model, @PathVariable Long id){
         model.addAttribute("country", countryRepo.findById(id).get());
-        modelAllCon.addAttribute("countries", countryRepo.findAll());
         return "country";
     }
 

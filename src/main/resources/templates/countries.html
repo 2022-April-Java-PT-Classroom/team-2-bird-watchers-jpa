@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/style.css">
-        <title>Countries</title>
-    </head>
-    <body>
-    <header>
-        <nav class="center">
-            <ul>
-                <li><a href="/">Home</a></li>|
-                <li><a href="/about-us">About Us</a></li>|
-                <li><a href="/countries">Countries</a></li>|
-                <li><a href="/regions">Regions</a></li>|
-                <li><a href="/birds">Birds</a></li>|
-                <li><a href="/users">Users</a></li>|
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>
-                    <a href="/admin">Administration</a>
-                    <div class="sub-menu">
-                        <div class="sub-nav"><a href="/admin/countries">Manage Countries</a></div>
-                        <div class="sub-nav"><a href="/admin/regions">Manage Regions</a></div>
-                        <div class="sub-nav"><a href="/admin/birds">Manage Birds</a></div>
-                        <div class="sub-nav"><a href="/admin/users">Manage Users</a></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/aba5373111.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+    <title>Jac Enterprise</title>
+</head>
+<body>
+<header>
+    <!--X----------------Nav Bar----------------------->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="logo">
+                <a href="/" class="text-grey">Jac Enterprise</a>
+            </div>
 
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <h1><u>Countries</u></h1>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link"><a href="/">Home</a></li>
+                    <li class="nav-link"><a href="/about-us">About Us</a></li>
+                    <li class="nav-link" ><a href="/countries">Countries</a></li>
+                    <li class="nav-link"><a href="/regions">Regions</a></li>
+                    <li class="nav-link"><a href="/birds">Birds</a></li>
+                </ul>
+            </div>
+            <div class="social text-gray social-top">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </nav>
 
-        <div class="y-separation"></div>
-    </header>
+    <!--X----------------Nav Bar----------------------->
+</header>
 
-    <main>
-        <div class="y-separation"></div>
-        <div class="y-separation">
-            <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                    <th>ID</th>
-                    <th>Country</th>
-                    <th>Region</th>
-                    <th>Habitat</th>
-                </tr>
-                <tr th:each="country :${countries}">
-                    <td th:text="${country.id}"></td>
-                    <td><a th:href=" '/countries/' + ${country.id} " th:text="${country.countryName}"></a></td>
-                    <td th:text="${country.region}"></td>
-                    <td th:text="${country.habitat}"></td>
-                </tr>
-             </table>
-         </div>
-    </main>
+<!--X---------------main----------------------->
+<main>
+    <div class="title">Countries</div>
+    <div class="box-container-country">
+        <!--1------------->
+        <div class="box-country"  th:each="country :${countries}">
+            <span><i class="fa fa-map-marker"></i></span>
+            <p class="heading" th:text="${country.countryName}"></p>
+            <p class="details" th:text="${country.region}"></p>
+            <p class="details" th:text="${country.habitat}"></p>
 
-    <footer>
-        <p>©2022 Copyright WCCI Team 2</p>
-    </footer>
+            <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
 
-    </body>
+        </div>
+    </div>
+</main>
+
+<!--X---------------footer----------------------->
+<footer>
+    <p>©2022 Copyright WCCI Team 2</p>
+</footer>
+</body>
 </html>
