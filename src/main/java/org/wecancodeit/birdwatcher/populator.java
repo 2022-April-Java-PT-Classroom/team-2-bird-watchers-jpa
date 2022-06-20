@@ -2,8 +2,8 @@ package org.wecancodeit.birdwatcher;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.wecancodeit.birdwatcher.model.Bird;
 import org.wecancodeit.birdwatcher.model.Country;
-import org.wecancodeit.birdwatcher.model.Region;
 import org.wecancodeit.birdwatcher.repo.BirdRepository;
 import org.wecancodeit.birdwatcher.repo.CountryRepository;
 import org.wecancodeit.birdwatcher.repo.RegionRepository;
@@ -24,16 +24,6 @@ public class populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-//        Region regionOne = new Region("Central", "Forest");
-//        Region regionTwo = new Region("Southern", "Tropical");
-//        Region regionThree = new Region("Northern", "Wetlands");
-//        Region regionFour = new Region("Southern", "Grasslands");
-//
-//        regionStorage.save(regionOne);
-//        regionStorage.save(regionTwo);
-//        regionStorage.save(regionThree);
-//        regionStorage.save(regionFour);
-
         Country countryOne = new Country("Thailand", "Central", "Forest");
 
         Country countryTwo= new Country("Thailand", "Southern", "Tropical");
@@ -47,9 +37,21 @@ public class populator implements CommandLineRunner {
         countryStorage.save(countryThree);
         countryStorage.save(countryFour);
 
+        Bird crane = new Bird("Siberian Cranes ", "picture", "These birds are light grey body and the upper head with red skin. It is the tallest of the flying birds. You will usually see them in the wetlands found in Northwest India. They eat aquatic plants, inverebrates, grains, vertrbrates and insects.");
+        Bird darter = new Bird("Indian Darter", "picture", "These birds are long and have a slender neck with a pointed bill. They are found in the wetlands and they like to eat fish.");
+        Bird kingFisher = new Bird("Pied Kingfisher","picture", "These fish are black and white plumage. They are found in pairs or small family. They eat fish.");
+        Bird pigeons = new Bird("Nilgiri Wood Pigeons", "picture", "These bluish grey birds eat wild fruit, berries, seeds, flowers and leaf buds. They usually breed during the season of March to July.");
+        Bird kite = new Bird("Black-winged Kite", "picture", "These birds are greyish blue. They eat small mammals, birds and insects. They are found open area in a grassland habitat. They usually brred during April and May.");
+        Bird parakeets = new Bird("Blue-winged Parakeets", "picture", "These birds have blue tails tipped with yellow and dark wings.These birds are found in small folks. They eat berries, figs, leaf buds, pollen, seeds, nuts, and nectar.");
+
+        birdStorage.save(crane);
+        birdStorage.save(darter);
+        birdStorage.save(kingFisher);
+        birdStorage.save(pigeons);
+        birdStorage.save(kite);
+        birdStorage.save(parakeets);
 
 
-//        birdStorage.save(birdOne);
 
     }
 }
