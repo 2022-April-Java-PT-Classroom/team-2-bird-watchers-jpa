@@ -82,8 +82,7 @@ public class populator implements CommandLineRunner {
 
         Bird hornbill = new Bird("White-crowned Hornbill", "./images/white-crowned-hornbill.jpeg",
                 "The female lays two white eggs in a tree hole, then seals herself in by blocking the entrance" +
-                        " to the nest with droppings, debris and mud. The male, and other adults and young forming a " +
-                        "cooperative group, feed the breeding female and the chicks through a narrow hole. The female " +
+                        " to the nest with droppings, debris and mud. The female " +
                         "breaks the \"wall\" and leaves the nest when the chicks are able to fly.");
         hornbill.addCountry(countryTwo);
 
