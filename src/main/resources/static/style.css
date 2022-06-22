@@ -66,7 +66,6 @@ button.btn{
 /* --------------- navbar ----------------- */
 
 .nav{
-    background: white;
     padding: 0 2rem;
     height: 0rem;
     min-height: 10vh;
@@ -103,7 +102,7 @@ button.btn{
     font-family: 'Roboto', sans-serif;
 }
 .social-top{
- margin: 20px 0 0;
+    margin: 20px 0 0;
 }
 .nav .social{
     padding: .4rem 0;
@@ -111,6 +110,7 @@ button.btn{
 
 .nav .social{
     padding: 0.2rem;
+    color: black;
 }
 
 .nav .social i:hover{
@@ -126,13 +126,16 @@ main{
     margin: 0;
 }
 main .site-title{
-    background: url('/images/sunshiney-indonesian-valley-filled-with-rice-paddies.jpg');
-    background-size: cover;
-    height: 110vh;
-    display: flex;
-    justify-content: center;
-
+  background: url('/images/sunshiney-indonesian-valley-filled-with-rice-paddies.jpg')
+      no-repeat;
+  color: #fff;
+  padding: 80px 0;
+  font-family: "Lato", sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 main .site-title .site-background{
     padding-top: 10rem;
     text-align: center;
@@ -312,6 +315,48 @@ main .range {
 }
 /*-------x---------main content-------------*/
 
+
+/*-----------------about us---------------------*/
+
+.card{
+    margin: 1em 1em 1em 1em;
+
+}
+.card img{
+    max-height: 400px;
+    max-width: 400px;
+    object-fit: cover;
+    margin: 1em 1em 1em 1em;
+
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ .card img{
+     margin: 1em 1em;
+     border-radius: 12px;
+     padding: 0;
+
+ }
+
+ .card {
+    flex: 0 0 300px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0,0,0,0);
+
+ }
+
+/*-----------------about us---------------------*/
+
+
 /*-----------------footer---------------------*/
 footer {
     background-size: cover;
@@ -323,3 +368,49 @@ footer p {
     padding:30px 0 20px 50px;
     font-size:12px;
 }
+
+footer {
+  background: linear-gradient(#131313e1, #181818e1),
+    url('/images/sunshiney-indonesian-valley-filled-with-rice-paddies.jpg')
+      no-repeat;
+  color: #fff;
+  padding: 80px 0;
+  font-family: "Lato", sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+footer p,
+footer ul li a {
+  font-size: 0.8em;
+  color: rgb(214, 214, 214);
+  text-transform: capitalize;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+footer h6 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-left: 10px;
+
+}
+
+footer strong {
+  color: #b48f31;
+}
+
+footer p strong {
+  color: #b48f31;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.row{
+    display: flex;
+}
+
+

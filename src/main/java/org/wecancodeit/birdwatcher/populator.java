@@ -4,7 +4,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancodeit.birdwatcher.model.Bird;
 import org.wecancodeit.birdwatcher.model.Country;
-import org.wecancodeit.birdwatcher.model.Region;
 import org.wecancodeit.birdwatcher.repo.BirdRepository;
 import org.wecancodeit.birdwatcher.repo.CountryRepository;
 import org.wecancodeit.birdwatcher.repo.RegionRepository;
@@ -112,9 +111,11 @@ public class populator implements CommandLineRunner {
                         " hybrid between the silver pheasant and the Vietnamese pheasant.");
         pheasant.addCountry(countryOne);
 
+
         birdStorage.save(crane);
         birdStorage.save(darter);
         birdStorage.save(kingFisher);
+
         birdStorage.save(pigeon);
         birdStorage.save(kite);
         birdStorage.save(parakeet);
@@ -124,6 +125,7 @@ public class populator implements CommandLineRunner {
         birdStorage.save(roller);
         birdStorage.save(broadbill);
         birdStorage.save(pheasant);
+
 
     }
 }
