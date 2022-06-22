@@ -98,7 +98,7 @@ public class populator implements CommandLineRunner {
         roller.addCountry(countryThree);
         roller.addCountry(countryFour);
 
-        Bird broadbill = new Bird("Silver-breasted Broadbill", "silver-breasted-broadbill.png",
+        Bird broadbill = new Bird("Silver-breasted Broadbill", "./images/silver-breasted-broadbill.png",
                 "The silver-breasted broadbill eats invertebrates, primarily insects : grasshoppers, mantises," +
                         " caterpillars, larvae, small land snails. These insects are taken by flycatching from perch or " +
                         "by gleaning branches and foliage.");
