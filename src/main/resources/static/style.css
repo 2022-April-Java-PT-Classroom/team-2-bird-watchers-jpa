@@ -316,6 +316,46 @@ main .range {
 /*-------x---------main content-------------*/
 
 
+/*-----------------about us---------------------*/
+
+.card{
+    margin: 1em 1em 1em 1em;
+
+}
+.card img{
+    max-height: 400px;
+    max-width: 400px;
+    object-fit: cover;
+    margin: 1em 1em 1em 1em;
+
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ .card img{
+     margin: 1em 1em;
+     border-radius: 12px;
+     padding: 0;
+
+ }
+
+ .card {
+    flex: 0 0 300px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0,0,0,0);
+
+ }
+
+/*-----------------about us---------------------*/
+
 
 /*-----------------footer---------------------*/
 footer {
@@ -371,6 +411,8 @@ footer p strong {
 .row{
     display: flex;
 }
+
 .social-icons{
     margin-left: 5rem;
 }
+
