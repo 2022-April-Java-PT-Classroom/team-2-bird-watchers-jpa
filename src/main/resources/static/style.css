@@ -277,10 +277,10 @@ main .site-title .btn:hover{
 .box-3 button{
 	width:100px;
 	height:30px;
-	background-color:#FFFFFF;
+	background-color:#FFC100;;
 	border:none;
 	outline: none;
-	border-radius:5px;
+	border-radius:20px;
 	cursor: pointer;
 }
 .fa-map-marker{
@@ -365,7 +365,7 @@ main .range {
 
 /*-----------------about us---------------------*/
 
-.card{
+/*.card{
     margin: 1em 1em 1em 1em;
 
 }
@@ -403,8 +403,86 @@ main .range {
     box-shadow: 0px 10px 13px -7px #000000,
     5px 5px 15px 5px rgba(0,0,0,0);
 
- }
+ }*/
 
+ .mission{
+      align-items: center;
+      text-align: center;
+ }
+ .mission h1{
+    text-align:center;
+    color:#551a8b;
+ }
+ .mission h1 hr{
+   width:15%;
+   border-top:2px solid #000;
+   background-color:transperant;
+   border-bottom:none;
+   margin-bottom:50px;
+ }
+.team{
+   width:90%;
+   margin:auto;
+   padding:5% 5%;
+   over-flow:hidden;
+}
+.team h1{
+   text-align:center;
+   color:#551a8b;
+}
+.team h1 hr{
+   width:15%;
+   border-top:2px solid #000;
+   background-color:transperant;
+   border-bottom:none;
+   margin-bottom:50px;
+}
+.team .card{
+   padding-bottom:20px;
+   padding-top:20px;
+   position:relative;
+   min-width:20%;
+   height:500px !important;
+   height:auto;
+   background-color:#fff;
+   display:inline-block;
+   margin:40px 6.5%;
+   box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+   text-align:center;
+}
+.card .circle-container{
+   position:relative;
+   background-color:#FFC100;
+   width:250px;
+   height:250px;
+   border:none;
+   border-radius:50%;
+   margin:auto;
+   color:#fff;
+}
+.circle-container h1{
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   margin:0;
+   font-size:60px;
+}
+
+.team .card h2{
+   text-align:center;
+   margin:30px 0 0 0;
+}
+.team .card h4{
+   text-align:center;
+   margin:10px 0 0 0;
+}
+.team .card p{
+   width:250px;
+   margin:30px auto;
+   text-align:center;
+
+}
 /*-----------------about us---------------------*/
 
 
