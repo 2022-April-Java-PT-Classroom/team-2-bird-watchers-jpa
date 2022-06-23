@@ -42,16 +42,16 @@
 
 <!--X---------------main----------------------->
     <main>
-        <div class="title">Popular Destinations</div>
+        <div class="title">Birds</div>
+        <div class="y-separation"></div>
         <div class="box-container-country">
             <!--1------------->
-            <div class="box-country"  th:each="country :${countries}">
-                <span><i class="fa fa-map-marker"></i></span>
-                <p class="heading" th:text="${country.countryName}"></p>
-                <p class="details" th:text="${country.region}"></p>
-                <p class="details" th:text="${country.habitat}"></p>
-
-                <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
+            <div class="box-bird"  th:each="bird :${birds}">
+                <span><i class="fa fa-crow"></i></span>
+                <p class="heading" th:text="${bird.birdName}"></p>
+                <p class="details" ><img th:src="${bird.imageUrl}" height="200"></p>
+<!--                <p class="details" th:each="country :${bird.countries}"><li th:text="${country.countryName}"></li></p>-->
+                <a th:href=" '/birds/' + ${bird.id} " > <button th:text="'Learn More'"></button></a>
 
             </div>
         </div>

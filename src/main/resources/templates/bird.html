@@ -3,27 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/aba5373111.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
-    <title>Bird</title>
+    <title>Jac Enterprise</title>
 </head>
-
+<body>
 <header>
-    <nav class="center">
-        <ul>
-            <li><a href="/">Home</a></li>|
-            <li><a href="/about-us">About Us</a></li>|
-            <li><a href="/countries">Countries</a></li>
-        </ul>
-    </nav>
-    <h1 th:text=""></h1>
+    <!--X----------------Nav Bar----------------------->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="logo">
+                <a href="/" class="text-grey">Jac Enterprise</a>
+            </div>
 
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link"><a href="/">Home</a></li>
+                    <li class="nav-link"><a href="/about-us">About Us</a></li>
+                    <li class="nav-link" ><a href="/countries">Countries</a></li>
+                    <li class="nav-link"><a href="/regions">Regions</a></li>
+                    <li class="nav-link"><a href="/birds">Birds</a></li>
+                </ul>
+            </div>
+            <div class="social text-gray social-top">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!--X----------------Nav Bar----------------------->
 </header>
 
-<body>
+<!--X---------------main----------------------->
+<main>
+    <div class="title" th:text="${bird.birdName}"></div>
+        <div class="box-container-country">
+        <!--1------------->
+        <div class="content range-noflex">
+<!--            <span><i class="fa fa-crow"></i></span>-->
+            <img th:src="${bird.imageUrl}" height="500" class="img-left">
+            <p th:text="${bird.description}" ></p>
+            <div class="clear"></div>
+            <p class="title">Countries</p>
+            <a th:each="country :${bird.countries}" th:href="'/countries/' + ${country.id}" class="inline" th:text="${country.countryName}"></a>
 
+            <p class="title">Habitats</p>
+            <a th:each="habitat :${bird.habitats}" th:href="'#'" class="inline" th:text="${habitat.habitatName}"></a>
+        </div>
+    </div>
 
-</body>
+    <div class="title">Birds</div>
+    <div class="y-separation"></div>
+    <div class="box-container-country">
+        <!--1------------->
+        <div class="box-bird"  th:each="bird :${birds}">
+            <span><i class="fa fa-crow"></i></span>
+            <p class="heading" th:text="${bird.birdName}"></p>
+            <p class="details" ><img th:src="${bird.imageUrl}" height="200"></p>
+            <!--                <p class="details" th:each="country :${bird.countries}"><li th:text="${country.countryName}"></li></p>-->
+            <a th:href=" '/birds/' + ${bird.id} " > <button th:text="'Learn More'"></button></a>
+
+        </div>
+    </div>
+</main>
+
+<!--X---------------footer----------------------->
 <footer>
     <p>©2022 Copyright WCCI Team 2</p>
 </footer>
+</body>
 </html>

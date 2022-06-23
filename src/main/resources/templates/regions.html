@@ -45,12 +45,13 @@
     <div class="title">Regions</div>
     <div class="box-container-country">
         <!--1------------->
-        <div class="box-country"  th:each="regiona :${regions}">
+        <div class="box-country"  th:each="region :${regions}">
             <span><i class="fa fa-map-signs"></i></span>
-            <p class="heading" th:text="${regiona.region}"></p>
-            <p class="details" th:text="${regiona.habitat}"></p>
+            <p class="heading" th:text="${region.regionName}"></p>
+<!--            <p class="details" th:text="${region.habitats[0].habitatName}"></p>-->
+<!--            <p class="details" th:text="${region.countries[0].countryName}"></p>-->
 
-            <a th:href=" '/regions/' + ${regiona.id} " > <button th:text="'Learn More'"></button></a>
+            <a th:href=" '/regions/' + ${region.id} " > <button th:text="'Learn More'"></button></a>
 
         </div>
     </div>

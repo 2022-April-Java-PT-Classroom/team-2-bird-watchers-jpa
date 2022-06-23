@@ -182,7 +182,7 @@ main .site-title .btn:hover{
 	flex-wrap: wrap;
 }
 
-.box-country{
+.box-country, .box-bird {
     width: 200px;
 	height:250px;
 	background-repeat: no-repeat;
@@ -194,20 +194,25 @@ main .site-title .btn:hover{
 	flex-direction: column;
 	margin: 0px 20px 40px;
 	}
-.box-country .heading{
+
+.box-bird {
+    width: 300px;
+	height:350px;
+}
+.box-country .heading, .box-bird .heading{
     color: #979797;
     font-size: 23px;
     line-height: 0px;
 }
 
-.box-country .details{
+.box-country .details, .box-bird .details{
     color: #8F8F8F;
     text-align: center;
     width: 230px;
     margin: 0px 0px 20px 0px;
 }
 
-.box-country button{
+.box-country button, .box-bird button{
 	width:100px;
 	height:30px;
 	background-color:#FFC100;
@@ -217,7 +222,7 @@ main .site-title .btn:hover{
 	cursor:pointer;
 }
 
-.box-country button:hover{
+.box-country button:hover, .box-bird button:hover{
 	background-color:#ddd;
 }
 
@@ -292,12 +297,26 @@ main .content .img-right {
     margin: 0 0px 10px 20px;
     float: right;
 }
-main .range {
+main .range, main .range-noflex, .range-country{
     margin: 30px 50px 70px 50px;
-    display:flex;
-    justify-content: space-between;
-    flex-direction: row;
-    /*flex-wrap: wrap;*/
+    box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+    padding: 20px 20px 20px 5px;
+}
+
+
+.range-noflex{
+     width: 100%;
+}
+.range-country{
+    width: %;
+}
+
+
+main .range{
+     display:flex;
+      flex-direction: row;
+     justify-content: space-between;
+     /*flex-wrap: wrap;*/
 }
 
 .center{
@@ -322,4 +341,7 @@ footer {
 footer p {
     padding:30px 0 20px 50px;
     font-size:12px;
+}
+.inline{
+    margin:10px;
 }

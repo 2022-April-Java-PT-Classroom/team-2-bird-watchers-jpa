@@ -110,8 +110,7 @@
         <div class="box-country"  th:each="country :${countries}">
             <span><i class="fa fa-map-marker"></i></span>
             <p class="heading" th:text="${country.countryName}"></p>
-            <p class="details" th:text="${country.region}"></p>
-            <p class="details" th:text="${country.habitat}"></p>
+            <img th:src="${country.imgUrl}" width="170">
 
             <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
 

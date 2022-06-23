@@ -43,11 +43,11 @@
 <!--X---------------main----------------------->
 <main>
     <div class="title" th:text="'Country: '+ ${country.countryName} "></div>
-    <div class="content">
-        <ul>
-            <li th:text="'Region: '+ ${country.region}"></li>
-            <li th:text="'Habitat: '+ ${country.habitat}"></li>
-        </ul>
+    <div class="content range-country">
+<!--        <div class="">-->
+            <center><img th:src="${country.imgUrl}" max-width="670"></center>
+            <p th:text="${country.description}" ></p>
+<!--        </div>-->
     </div>
 
     <div class="title">Popular Destinations</div>
@@ -55,9 +55,8 @@
         <!--1------------->
         <div class="box-country"  th:each="country :${countries}">
             <span><i class="fa fa-map-marker"></i></span>
-            <p class="heading" th:text="${country.countryName}"></p>
-            <p class="details" th:text="${country.region}"></p>
-            <p class="details" th:text="${country.habitat}"></p>
+            <p class="heading" th:text="${country.countryName}">
+            <img th:src="${country.imgUrl}" width="170"></p>
 
             <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
 

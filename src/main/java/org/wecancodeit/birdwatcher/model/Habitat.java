@@ -1,20 +1,27 @@
 package org.wecancodeit.birdwatcher.model;
+
 import javax.persistence.*;
 import java.util.*;
 
 @Entity
-public class Region {
-
+public class Habitat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Column(name = "id", nullable = false)
     private Long id;
-
-    private String regionName;
+    private String habitatName;
     @ManyToMany
     private Collection<Country> countries;
-
     @ManyToMany
-    private Collection<Habitat> habitats;
+    private Collection<Region> regions;
+
+
+    public Habitat() {
+    }
+
+    public Habitat(String habitatName) {
+        this.habitatName = habitatName;
+    }
 
     public Long getId() {
         return id;
@@ -24,14 +31,13 @@ public class Region {
         this.id = id;
     }
 
-    public Region(){
-
+    public String getHabitatName() {
+        return habitatName;
     }
 
-    public Region(String regionName) {
-        this.regionName = regionName;
+    public void setHabitatName(String habitatName) {
+        this.habitatName = habitatName;
         this.countries =  new ArrayList<>(Arrays.asList());
-        this.habitats =  new ArrayList<>(Arrays.asList());
     }
 
     public void addCountry(Country country){
@@ -42,18 +48,6 @@ public class Region {
         return country.get(Id);
     }
 
-    public void addHabitat(Habitat habitat){
-        habitats.add(habitat);
-    }
-
-    public String getRegionName() {
-        return regionName;
-    }
-
-    public void setRegionName(String regionName) {
-        this.regionName = regionName;
-    }
-
     public Collection<Country> getCountries() {
         return countries;
     }
@@ -62,19 +56,19 @@ public class Region {
         this.countries = countries;
     }
 
-    public Collection<Habitat> getHabitat() {
-        return habitats;
+    public Collection<Region> getRegions() {
+        return regions;
     }
 
-    public void setHabitat(Collection<Habitat> habitats) {
-        this.habitats = habitats;
+    public void setRegions(Collection<Region> regions) {
+        this.regions = regions;
     }
 
     @Override
     public String toString() {
-        return "Region{" +
+        return "Habitat{" +
                 "id=" + id +
-                ", regionName='" + regionName + '\'' +
+                ", habitatName='" + habitatName + '\'' +
                 '}';
     }
 
@@ -82,12 +76,13 @@ public class Region {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Region region = (Region) o;
-        return regionName.equals(region.regionName);
+        Habitat habitat = (Habitat) o;
+        return habitatName.equals(habitat.habitatName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(regionName);
+        return Objects.hash(habitatName);
     }
+
 }

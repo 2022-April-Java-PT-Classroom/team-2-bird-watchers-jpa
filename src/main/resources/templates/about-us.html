@@ -72,7 +72,7 @@
                 is no classroom instruction or formal critique of participant photographs. Instead,
                 we concentrate our efforts on making environmental portraits, that is, portraits of
                 birds and animals in their natural environments.”<br><br>
-            <div class="y-separation center"><img src="./images/peroquet.jpg" alt="" class="y-separation"></div>
+            <div class="y-separation center"><img src="./images/peroquet.jpg"  width="500" alt="" class="y-separation"></div>
             </p>
         </div>
 
@@ -84,8 +84,7 @@
         <div class="box-country"  th:each="country :${countries}">
             <span><i class="fa fa-map-marker"></i></span>
             <p class="heading" th:text="${country.countryName}"></p>
-            <p class="details" th:text="${country.region}"></p>
-            <p class="details" th:text="${country.habitat}"></p>
+            <img th:src="${country.imgUrl}" width="170">
 
             <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
 

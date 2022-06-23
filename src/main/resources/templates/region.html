@@ -42,12 +42,15 @@
 
 <!--X---------------main----------------------->
 <main>
-    <div class="title" th:text="'Region: '+ ${region.region} "></div>
-    <div class="content">
-        <ul>
-            <li th:text="'Region: '+ ${region.region}"></li>
-            <li th:text="'Habitat: '+ ${region.habitat}"></li>
+    <div class="title" th:text="${region.regionName}"></div>
+    <div class="content range-noflex">
+        <ul th:each="country :${region.countries}">
+            <li th:text="${country.countryName}"></li>
         </ul>
+<!--        <hr>-->
+<!--        <ul th:each="habitat :${region.habitats}">-->
+<!--            <li th:text="${habitat.habitatName}"></li>-->
+<!--        </ul>-->
     </div>
 
     <div class="title">Regions</div>
@@ -55,8 +58,7 @@
         <!--1------------->
         <div class="box-country"  th:each="region :${regions}">
             <span><i class="fa fa-map-signs"></i></span>
-            <p class="heading" th:text="${region.region}"></p>
-            <p class="details" th:text="${region.habitat}"></p>
+            <p class="heading" th:text="${region.regionName}"></p>
 
             <a th:href=" '/regions/' + ${region.id} " > <button th:text="'Learn More'"></button></a>
 

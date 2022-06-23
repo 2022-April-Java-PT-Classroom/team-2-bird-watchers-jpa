@@ -17,8 +17,11 @@ public class Bird {
     @ManyToMany
     private Collection<Country> countries;
 
-//    @ManyToMany
-//    private Collection<Region> regions;
+    @ManyToMany
+    private Collection<Region> regions;
+
+    @ManyToMany
+    private Collection<Habitat> habitats;
 
     public Long getId() {
 
@@ -39,7 +42,8 @@ public class Bird {
         this.imageUrl = imageUrl;
         this.description = description;
         this.countries =  new ArrayList<>(Arrays.asList());
-//        this.regions =  new ArrayList<>(Arrays.asList());
+        this.regions =  new ArrayList<>(Arrays.asList());
+        this.habitats =  new ArrayList<>(Arrays.asList());
     }
 
     public void addCountry(Country country){
@@ -48,6 +52,23 @@ public class Bird {
     HashMap<Long, Country> country = new HashMap<>();
     public Country getCountry(Long Id){
         return country.get(Id);
+    }
+
+
+    public void addRegion(Region region){
+        regions.add(region);
+    }
+    HashMap<Long, Region> region = new HashMap<>();
+    public Region getRegion(Long Id){
+        return region.get(Id);
+    }
+
+    public void addHabitat(Habitat habitat){
+        habitats.add(habitat);
+    }
+    HashMap<Long, Habitat> habitat = new HashMap<>();
+    public Habitat getHabitat(Long Id){
+        return habitat.get(Id);
     }
 
     public String getBirdName() {
@@ -74,6 +95,35 @@ public class Bird {
 //    public void setRegions(Collection<Region> regions) {
 //        this.regions = regions;
 //    }
+
+
+    public void setBirdName(String birdName) {
+        this.birdName = birdName;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Collection<Region> getRegions() {
+        return regions;
+    }
+
+    public void setRegions(Collection<Region> regions) {
+        this.regions = regions;
+    }
+
+    public Collection<Habitat> getHabitats() {
+        return habitats;
+    }
+
+    public void setHabitats(Collection<Habitat> habitats) {
+        this.habitats = habitats;
+    }
 
     @Override
     public String toString() {
