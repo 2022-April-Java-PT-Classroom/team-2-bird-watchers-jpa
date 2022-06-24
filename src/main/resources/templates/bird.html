@@ -43,13 +43,43 @@
         <h1 th:text="'Bird: '+ ${bird.birdName} "></h1>
     </header>
 
-    </main>
+
+<!--X---------------main----------------------->
+<main>
+    <div class="title" th:text="${bird.birdName}"></div>
+    <div class="box-container-country">
+        <!--1------------->
+        <div class="content range-noflex">
+            <img th:src="${bird.imageUrl}" height="500" class="img-left">
+            <p th:text="${bird.description}" ></p>
+            <div class="clear"></div>
+            <p class="title" >Countries</p>
+            <ul th:each="country :${bird.countries}">
+                 <a  th:href="'/countries/' + ${country.id}" class="inline"
+                     th:text="${country.countryName} +' - '+ ${country.region} +' - '+ ${country.habitat}"></a>
+            </ul>
+        </div>
+    </div>
+    
     <img th:src="'.' + ${bird.imageUrl}">
     <h2 th:text="'Description: '+ ${bird.description}"></h2>
 
 
-    </main>
+    <div class="title">Birds</div>
+    <div class="y-separation"></div>
+    <div class="box-container-country">
+        <!--1------------->
+        <div class="box-bird"  th:each="bird :${birds}">
+            <span><i class="fa fa-crow"></i></span>
+            <p class="heading" th:text="${bird.birdName}"></p>
+            <p class="details" ><img th:src="${bird.imageUrl}" width="150"></p>
+            <a th:href=" '/birds/' + ${bird.id} " > <button th:text="'Learn More'"></button></a>
+            
+        </div>
+    </div>
+</main>
 
+<!--X---------------footer----------------------->
 
 <footer>
     <div class="container">

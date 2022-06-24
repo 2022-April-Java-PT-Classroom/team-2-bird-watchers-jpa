@@ -12,34 +12,52 @@
     <title>Jac Enterprise</title>
 </head>
 <body>
-<header>
-    <!--X----------------Nav Bar----------------------->
-    <nav class="nav">
-        <div class="nav-menu flex-row">
-            <div class="logo">
-                <a href="/" class="text-grey">Jac Enterprise</a>
+
+    <header>
+        <!--X----------------Nav Bar----------------------->
+        <nav class="nav">
+            <div class="nav-menu flex-row">
+                <div class="logo">
+                    <a href="/" class="text-grey">Jac Enterprise</a>
+                </div>
+
+                <div>
+                    <ul class="nav-items">
+                        <li class="nav-link"><a href="/">Home</a></li>
+                        <li class="nav-link"><a href="/about-us">About Us</a></li>
+                        <li class="nav-link" ><a href="/countries">Countries</a></li>
+                        <li class="nav-link"><a href="/regions">Regions</a></li>
+                        <li class="nav-link"><a href="/birds">Birds</a></li>
+                        <li class="nav-link"><a href="/travel">Travel</a></li>
+                    </ul>
+                </div>
+                <div class="social text-gray social-top">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </nav>
+
+<!--X----------------Nav Bar----------------------->
+    </header>
+
+<!--X---------------main----------------------->
+    <main>
+
+
+
+        <div class="birds">
+
+            <div class="bird" th:each="bird :${birds}">
+                <h3 th:text="${bird.birdName}">Black Winged Kite</h3>
+                <a th:href="'/birds/' + ${bird.id} "><img th:src="${bird.imageUrl}"
+                                                          th:title="${bird.birdName}" alt="${bird.birdName}"
+                                                          width="250" class="img-left"></a>
             </div>
 
-            <div>
-                <ul class="nav-items">
-                    <li class="nav-link"><a href="/">Home</a></li>
-                    <li class="nav-link"><a href="/about-us">About Us</a></li>
-                    <li class="nav-link"><a href="/countries">Countries</a></li>
-                    <li class="nav-link"><a href="/regions">Regions</a></li>
-                    <li class="nav-link"><a href="/birds">Birds</a></li>
-                    <li class="nav-link"><a href="/travel">Travel</a></li>
-                </ul>
-            </div>
-            <div class="social text-gray social-top">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </div>
-    </nav>
 
-    <!--X----------------Nav Bar----------------------->
-</header>
+
 
 <!--X---------------main----------------------->
 <main>
@@ -53,6 +71,7 @@
             <a th:href=" '/birds/' + ${bird.id} ">
                 <button th:text="'Learn More'"></button>
             </a>
+
         </div>
     </div>
 

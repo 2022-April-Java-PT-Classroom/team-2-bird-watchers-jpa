@@ -36,8 +36,9 @@ public class BirdController {
 
 
     @GetMapping("/{id}")
-    public String findOneBird(Model model, @PathVariable Long id) {
+    public String findOneBird(Model model, Model modelBird, @PathVariable Long id) {
         model.addAttribute("bird", birdRepo.findById(id).get());
+        modelBird.addAttribute("birds", birdRepo.findAll());
         return "bird";
     }
 

@@ -56,6 +56,11 @@ h3{
      color: #551a8b;
 }
 
+.site-title h3, .site-title h1{
+    color: #FFC100;
+    text-shadow:2px 2px 18px rgba(0,0,0,0.3);
+}
+
 button.btn{
     border: none;
     border-radius: 2rem;
@@ -188,7 +193,7 @@ main .site-title .btn:hover{
 	flex-wrap: wrap;
 }
 
-.box-country{
+.box-country, .box-bird {
     width: 200px;
 	height:250px;
 	background-repeat: no-repeat;
@@ -200,20 +205,25 @@ main .site-title .btn:hover{
 	flex-direction: column;
 	margin: 0px 20px 40px;
 	}
-.box-country .heading{
+
+.box-bird {
+    width: 250px;
+	height:300px;
+}
+.box-country .heading, .box-bird .heading{
     color: #979797;
     font-size: 23px;
     line-height: 0px;
 }
 
-.box-country .details{
+.box-country .details, .box-bird .details{
     color: #8F8F8F;
     text-align: center;
     width: 230px;
     margin: 0px 0px 20px 0px;
 }
 
-.box-country button{
+.box-country button, .box-bird button{
 	width:100px;
 	height:30px;
 	background-color:#FFC100;
@@ -223,10 +233,9 @@ main .site-title .btn:hover{
 	cursor:pointer;
 }
 
-.box-country button:hover{
+.box-country button:hover, .box-bird button:hover{
 	background-color:#ddd;
 }
-
 
 .box-large{
 	width: 100%;
@@ -240,7 +249,6 @@ main .site-title .btn:hover{
 	padding: 20px;
 
 }
-
 .box-1 span,
 .box-2 span,
 .box-3 span {
@@ -299,18 +307,27 @@ main .content .img-right {
     margin: 0 0px 10px 20px;
     float: right;
 }
-main .range {
+main .range, main .range-noflex, .range-country{
     margin: 30px 50px 70px 50px;
-    display:flex;
-    justify-content: space-between;
-    flex-direction: row;
-    /*flex-wrap: wrap;*/
-
-.title{
-    text-align: center;
-}
+    box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+    padding: 20px 20px 20px 5px;
 }
 
+
+.range-noflex{
+     width: 100%;
+}
+.range-country{
+    width: %;
+}
+
+
+main .range{
+     display:flex;
+      flex-direction: row;
+     justify-content: space-between;
+     /*flex-wrap: wrap;*/
+}
 
 .center{
     text-align:center;
@@ -369,13 +386,9 @@ main .range {
 
  }
 
-/*-----------------about us---------------------*/
-
  .mission{
       align-items: center;
       text-align: center;
-      padding-left: 8rem;
-      padding-right: 8rem;
  }
  .mission h1{
     text-align:center;
@@ -452,7 +465,9 @@ main .range {
 
 }
 /*-----------------about us---------------------*/
+
 /*----------------countries-------------------*/
+
 .countries{
       align-items: center;
       text-align: center;
@@ -470,8 +485,11 @@ main .range {
    border-bottom:none;
    margin-bottom:50px;
  }
+ 
 /*------x----------countries-------------------*/
+
 /*---------------regions-------------------*/
+
 .regions{
       align-items: center;
       text-align: center;
