@@ -45,28 +45,14 @@
 <!--X---------------main----------------------->
 <main>
 
-    <div class="title">Birds</div>
-    <div class="box-container-country">
-        <!--1------------->
-        <div class="box-country" th:each="bird :${birds}">
-            <p th:text="${bird.birdName}"></p>
-            <img th:src="${bird.imageUrl}" alt="" width="150" class="img-left">
-            <a th:href=" '/birds/' + ${bird.id} ">
-                <button th:text="'Learn More'"></button>
-            </a>
+    <div class="birds">
 
+        <div class="bird" th:each="bird :${birds}">
+            <h3 th:text="${bird.birdName}"></h3>
+            <a th:href="'/birds/' + ${bird.id} "><img th:src="${bird.imageUrl}"
+                                                      th:title="${bird.birdName}" alt="${bird.birdName}"
+                                                      width="250" class="img-left"></a>
         </div>
-    </div>
-
-        <div class="box-container-country">
-            <!--1------------->
-            <div class="box-country"  th:each="country :${countries}">
-                <span><i class="fa fa-map-marker"></i></span>
-                <p class="heading" th:text="${country.countryName}"></p>
-                <p class="details" th:text="${country.region}"></p>
-                <p class="details" th:text="${country.habitat}"></p>
-
-                <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
 
 
 </main>
