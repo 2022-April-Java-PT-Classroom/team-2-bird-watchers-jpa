@@ -56,6 +56,16 @@
         </div>
     </div>
 
+        <div class="box-container-country">
+            <!--1------------->
+            <div class="box-country"  th:each="country :${countries}">
+                <span><i class="fa fa-map-marker"></i></span>
+                <p class="heading" th:text="${country.countryName}"></p>
+                <p class="details" th:text="${country.region}"></p>
+                <p class="details" th:text="${country.habitat}"></p>
+
+                <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
+
 
 </main>
 
@@ -78,16 +88,32 @@
                     <h6>
                         contact info
                     </h6>
-                    <div>
 
-                        <p><strong>Address</strong><br> bird paradise <br> 120 ca 15th avenue-suite, usa</p>
-                    </div>
-                    <div>
+                    <p>Our mission at Jac Enterprise is the conservation of birds and their habitats.</p>
+                    <p> Together, we are improving native bird populations, the land and the lives of people.</p>
+                    <p>©2022 Copyright WCCI Team 2</p>
+               
+               </div>
+                <div class="col-md-1">
+                    <div class="address">
+                        <h6>
+                            contact info
+                        </h6>
+                        <div>
 
-                        <p>
+                            <p> <strong>Address</strong><br> Bird Paradise <br> 120 ca 15th avenue-suite, usa</p>
+                        </div>
+                        <div>
+
+                 
+                         <div>
+                            <p><strong>Email address</strong> <br> support@JEbirds.com</p>
+                        </div>
+                          <p>
                             <strong>
                                 Phone number
                             </strong><br>+91 999999999</p>
+
                     </div>
                     <div>
 
