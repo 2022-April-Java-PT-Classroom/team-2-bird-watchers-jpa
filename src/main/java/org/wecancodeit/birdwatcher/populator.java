@@ -55,7 +55,7 @@ public class populator implements CommandLineRunner {
                 "These fish are black and white plumage. They are found in pairs or small family. They eat fish.");
         kingFisher.addCountry(countryFour);
 
-        Bird pigeon = new Bird("Nilgiri Wood Pigeon", "./images/nigiri-wood-pigeon.jpeg",
+        Bird pigeon = new Bird("Nilgiri Wood Pigeon", "./images/nilgiri-wood-pigeon.jpeg",
                 "These bluish grey birds eat wild fruit, berries, seeds, flowers and leaf buds. They usually" +
                         " breed during the season of March to July.");
         pigeon.addCountry(countryFour);
