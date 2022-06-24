@@ -44,68 +44,78 @@
 <!--X---------------main----------------------->
     <main>
 
+
+
         <div class="birds">
-            <div class="bird">
-            <h3>Black Winged Kite</h3>
-        <img src="./images/black-winged-kite.jpeg" alt="" width="250" class="img-left">
+
+            <div class="bird" th:each="bird :${birds}">
+                <h3 th:text="${bird.birdName}">Black Winged Kite</h3>
+                <a th:href="'/birds/' + ${bird.id} "><img th:src="${bird.imageUrl}"
+                                                          th:title="${bird.birdName}" alt="${bird.birdName}"
+                                                          width="250" class="img-left"></a>
             </div>
 
-<!--            <a class="bird" th:href="@{/bird(id=${bird.id})}"></a>-->
+<!--            <div class="bird">-->
+<!--                <h3>Black Winged Kite</h3>-->
+<!--                <img src="./images/black-winged-kite.jpeg" alt="" width="250" class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Blue Winged Parakeet</h3>
-        <img src="./images/blue-winged-parakeet.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--&lt;!&ndash;            <a class="bird" th:href="@{/bird(id=${bird.id})}"></a>&ndash;&gt;-->
 
-            <div class="bird">
-            <h3>Indian Darter</h3>
-        <img src="./images/indian-darter.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Blue Winged Parakeet</h3>-->
+<!--        <img src="./images/blue-winged-parakeet.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Indochinese Roller</h3>
-        <img src="./images/indochinese-roller.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Indian Darter</h3>-->
+<!--        <img src="./images/indian-darter.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Jambu Fruit Dove</h3>
-        <img src="./images/jambu-fruit-dove.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Indochinese Roller</h3>-->
+<!--        <img src="./images/indochinese-roller.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Malayan Banded Pitta</h3>
-        <img src="./images/malayan-banded-pitta.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Jambu Fruit Dove</h3>-->
+<!--        <img src="./images/jambu-fruit-dove.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Nilgiri W</h3>
-        <img src="./images/nilgiri-wood-pigeon.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Malayan Banded Pitta</h3>-->
+<!--        <img src="./images/malayan-banded-pitta.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Pied Kingfisher</h3>
-        <img src="./images/pied-kingfisher.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Nilgiri W</h3>-->
+<!--        <img src="./images/nilgiri-wood-pigeon.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Siberian Crane</h3>
-        <img src="./images/siberian-crane.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Pied Kingfisher</h3>-->
+<!--        <img src="./images/pied-kingfisher.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Silver Breasted Broadbill</h3>
-        <img src="./images/silver-breasted-broadbill.png" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Siberian Crane</h3>-->
+<!--        <img src="./images/siberian-crane.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>Silver Pheasant</h3>
-        <img src="./images/silver-pheasant.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Silver Breasted Broadbill</h3>-->
+<!--        <img src="./images/silver-breasted-broadbill.png" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
 
-            <div class="bird">
-            <h3>White Crowned Hornbill</h3>
-        <img src="./images/white-crowned-hornbill.jpeg" alt="" width="250"  class="img-left">
-            </div>
+<!--            <div class="bird">-->
+<!--            <h3>Silver Pheasant</h3>-->
+<!--        <img src="./images/silver-pheasant.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
+
+<!--            <div class="bird">-->
+<!--            <h3>White Crowned Hornbill</h3>-->
+<!--        <img src="./images/white-crowned-hornbill.jpeg" alt="" width="250"  class="img-left">-->
+<!--            </div>-->
         </div>
 
         <div class="title">Popular Destinations</div>

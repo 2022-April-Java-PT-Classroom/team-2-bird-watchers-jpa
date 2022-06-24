@@ -37,13 +37,13 @@ public class populator implements CommandLineRunner {
         countryStorage.save(countryThree);
         countryStorage.save(countryFour);
 
-        Bird crane = new Bird("Siberian Cranes ", "./images/siberian-crane.jpeg",
+        Bird crane = new Bird("Siberian Cranes ", "/images/siberian-crane.jpeg",
                 "These birds are light grey body and the upper head " +
                         "with red skin. It is the tallest of the flying birds. You will usually see them in the wetlands found " +
                         "in Northwest India. They eat aquatic plants, invertebrates, grains, vertebrates and insects.");
         crane.addCountry(countryThree);
 
-        Bird darter = new Bird("Indian Darter", "./images/indian-darter.jpeg",
+        Bird darter = new Bird("Indian Darter", "/images/indian-darter.jpeg",
                 "These birds are long and have a slender neck with a " +
                         "pointed bill. They are found in the wetlands and they like to eat fish.");
         darter.addCountry(countryOne);
@@ -51,16 +51,16 @@ public class populator implements CommandLineRunner {
         darter.addCountry(countryThree);
         darter.addCountry(countryFour);
 
-        Bird kingFisher = new Bird("Pied Kingfisher", "./images/pied-kingfisher.jpeg",
+        Bird kingFisher = new Bird("Pied Kingfisher", "/images/pied-kingfisher.jpeg",
                 "These fish are black and white plumage. They are found in pairs or small family. They eat fish.");
         kingFisher.addCountry(countryFour);
 
-        Bird pigeon = new Bird("Nilgiri Wood Pigeon", "./images/nigiri-wood-pigeon.jpeg",
+        Bird pigeon = new Bird("Nilgiri Wood Pigeon", "/images/nilgiri-wood-pigeon.jpeg",
                 "These bluish grey birds eat wild fruit, berries, seeds, flowers and leaf buds. They usually" +
                         " breed during the season of March to July.");
         pigeon.addCountry(countryFour);
 
-        Bird kite = new Bird("Black-winged Kite", "./images/black-winged-kite.jpeg",
+        Bird kite = new Bird("Black-winged Kite", "/images/black-winged-kite.jpeg",
                 "These birds are greyish blue. They eat small mammals,bbirds and insects. They are found open" +
                         " area in a grassland habitat. They usually breed during April and May.");
         kite.addCountry(countryOne);
@@ -68,37 +68,37 @@ public class populator implements CommandLineRunner {
         kite.addCountry(countryThree);
         kite.addCountry(countryFour);
 
-        Bird parakeet = new Bird("Blue-winged Parakeet", "./images/blue-winged-parakeet.jpeg",
+        Bird parakeet = new Bird("Blue-winged Parakeet", "/images/blue-winged-parakeet.jpeg",
                 "These birds have blue tails tipped with yellow and dark wings.These birds are found in small" +
                         " folks. They eat berries, figs, leaf buds, pollen, seeds, nuts, and nectar.");
         parakeet.addCountry(countryFour);
 
-        Bird pitta = new Bird("Malayan Banded Pitta", "./images/malayan-banded-pitta.jpeg",
+        Bird pitta = new Bird("Malayan Banded Pitta", "/images/malayan-banded-pitta.jpeg",
                 "This colourful bird has a black head with a yellow/orange streak above the eye, an orange-red" +
                         " nape, a lemon-yellow throat, a chest barred with orange and dark blue, and a blue belly. The " +
                         "back is brown and the tail is blue.");
         pitta.addCountry(countryTwo);
 
-        Bird hornbill = new Bird("White-crowned Hornbill", "./images/white-crowned-hornbill.jpeg",
+        Bird hornbill = new Bird("White-crowned Hornbill", "/images/white-crowned-hornbill.jpeg",
                 "The female lays two white eggs in a tree hole, then seals herself in by blocking the entrance" +
                         " to the nest with droppings, debris and mud. The female " +
                         "breaks the \"wall\" and leaves the nest when the chicks are able to fly.");
         hornbill.addCountry(countryTwo);
 
-        Bird dove = new Bird("Jambu Fruit Dove", "./images/jambu-fruit-dove.jpeg",
+        Bird dove = new Bird("Jambu Fruit Dove", "/images/jambu-fruit-dove.jpeg",
                 "The jambu fruit dove is a shy and inconspicuous bird, camouflaged against the forest canopy " +
                         "by its green plumage. It is usually seen alone or in pairs, but a sizable flock may gather when" +
                         " feeding at a fruit tree. ");
         dove.addCountry(countryTwo);
 
-        Bird roller = new Bird("Indochinese Roller", "./images/indochinese-roller.jpeg",
+        Bird roller = new Bird("Indochinese Roller", "/images/indochinese-roller.jpeg",
                 "The Indochinese roller is distributed across Asia, from eastern India into Southeast Asia.");
         roller.addCountry(countryOne);
         roller.addCountry(countryTwo);
         roller.addCountry(countryThree);
         roller.addCountry(countryFour);
 
-        Bird broadbill = new Bird("Silver-breasted Broadbill", "./images/silver-breasted-broadbill.png",
+        Bird broadbill = new Bird("Silver-breasted Broadbill", "/images/silver-breasted-broadbill.png",
                 "The silver-breasted broadbill eats invertebrates, primarily insects : grasshoppers, mantises," +
                         " caterpillars, larvae, small land snails. These insects are taken by flycatching from perch or " +
                         "by gleaning branches and foliage.");
@@ -106,7 +106,7 @@ public class populator implements CommandLineRunner {
         broadbill.addCountry(countryTwo);
         broadbill.addCountry(countryFour);
 
-        Bird pheasant = new Bird("Silver Pheasant", "./images/silver-pheasant.jpeg",
+        Bird pheasant = new Bird("Silver Pheasant", "/images/silver-pheasant.jpeg",
                 "Once considered a very rare species, the imperial pheasant is actually a naturally occurring" +
                         " hybrid between the silver pheasant and the Vietnamese pheasant.");
         pheasant.addCountry(countryOne);
