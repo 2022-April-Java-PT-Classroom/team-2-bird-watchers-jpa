@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous" />
+          crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/aba5373111.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
     <title>Jac Enterprise</title>
 </head>
 <body>
+
     <header>
         <!--X----------------Nav Bar----------------------->
         <nav class="nav">
@@ -55,70 +56,25 @@
                                                           width="250" class="img-left"></a>
             </div>
 
-<!--            <div class="bird">-->
-<!--                <h3>Black Winged Kite</h3>-->
-<!--                <img src="./images/black-winged-kite.jpeg" alt="" width="250" class="img-left">-->
-<!--            </div>-->
 
-<!--&lt;!&ndash;            <a class="bird" th:href="@{/bird(id=${bird.id})}"></a>&ndash;&gt;-->
 
-<!--            <div class="bird">-->
-<!--            <h3>Blue Winged Parakeet</h3>-->
-<!--        <img src="./images/blue-winged-parakeet.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
 
-<!--            <div class="bird">-->
-<!--            <h3>Indian Darter</h3>-->
-<!--        <img src="./images/indian-darter.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
+<!--X---------------main----------------------->
+<main>
 
-<!--            <div class="bird">-->
-<!--            <h3>Indochinese Roller</h3>-->
-<!--        <img src="./images/indochinese-roller.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
+    <div class="title">Birds</div>
+    <div class="box-container-country">
+        <!--1------------->
+        <div class="box-country" th:each="bird :${birds}">
+            <p th:text="${bird.birdName}"></p>
+            <img th:src="${bird.imageUrl}" alt="" width="150" class="img-left">
+            <a th:href=" '/birds/' + ${bird.id} ">
+                <button th:text="'Learn More'"></button>
+            </a>
 
-<!--            <div class="bird">-->
-<!--            <h3>Jambu Fruit Dove</h3>-->
-<!--        <img src="./images/jambu-fruit-dove.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
-
-<!--            <div class="bird">-->
-<!--            <h3>Malayan Banded Pitta</h3>-->
-<!--        <img src="./images/malayan-banded-pitta.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
-
-<!--            <div class="bird">-->
-<!--            <h3>Nilgiri W</h3>-->
-<!--        <img src="./images/nilgiri-wood-pigeon.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
-
-<!--            <div class="bird">-->
-<!--            <h3>Pied Kingfisher</h3>-->
-<!--        <img src="./images/pied-kingfisher.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
-
-<!--            <div class="bird">-->
-<!--            <h3>Siberian Crane</h3>-->
-<!--        <img src="./images/siberian-crane.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
-
-<!--            <div class="bird">-->
-<!--            <h3>Silver Breasted Broadbill</h3>-->
-<!--        <img src="./images/silver-breasted-broadbill.png" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
-
-<!--            <div class="bird">-->
-<!--            <h3>Silver Pheasant</h3>-->
-<!--        <img src="./images/silver-pheasant.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
-
-<!--            <div class="bird">-->
-<!--            <h3>White Crowned Hornbill</h3>-->
-<!--        <img src="./images/white-crowned-hornbill.jpeg" alt="" width="250"  class="img-left">-->
-<!--            </div>-->
         </div>
+    </div>
 
-        <div class="title">Popular Destinations</div>
         <div class="box-container-country">
             <!--1------------->
             <div class="box-country"  th:each="country :${countries}">
@@ -129,24 +85,34 @@
 
                 <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
 
-            </div>
-        </div>
-    </main>
+
+</main>
 
 <!--X---------------footer----------------------->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1">
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                <h6>
+                    Jac <strong>Enterprise</strong>
+                </h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quaerat inventore,
+                    excepturi esse voluptates et quae ut optio quibusdam,
+                </p>
+                <p>eligendi libero modi nisi aut veniam obcaecati? Dolorem minima quae dolore!</p>
+                <p>©2022 Copyright WCCI Team 2</p>
+            </div>
+            <div class="col-md-1">
+                <div class="address">
                     <h6>
-                        Jac <strong>Enterprise</strong>
+                        contact info
                     </h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quaerat inventore,
-                        excepturi esse voluptates et quae ut optio quibusdam,
-                    </p>
-                    <p>eligendi libero modi nisi aut veniam obcaecati? Dolorem minima quae dolore!</p>
+
+                    <p>Our mission at Jac Enterprise is the conservation of birds and their habitats.</p>
+                    <p> Together, we are improving native bird populations, the land and the lives of people.</p>
                     <p>©2022 Copyright WCCI Team 2</p>
-                </div>
+               
+               </div>
                 <div class="col-md-1">
                     <div class="address">
                         <h6>
@@ -154,34 +120,39 @@
                         </h6>
                         <div>
 
-                            <p> <strong>Address</strong><br> bird paradise <br> 120 ca 15th avenue-suite, usa</p>
+                            <p> <strong>Address</strong><br> Bird Paradise <br> 120 ca 15th avenue-suite, usa</p>
                         </div>
                         <div>
 
-                            <p>
-                                <strong>
-                                    Phone number
-                                </strong><br>+91 999999999</p>
+                 
+                         <div>
+                            <p><strong>Email address</strong> <br> support@JEbirds.com</p>
                         </div>
-                        <div>
+                          <p>
+                            <strong>
+                                Phone number
+                            </strong><br>+91 999999999</p>
 
-                            <p><strong>Email address</strong> <br> support@birds.com</p>
-                        </div>
                     </div>
+                    <div>
 
+                        <p><strong>Email address</strong> <br> support@birds.com</p>
+                    </div>
                 </div>
-                <div class="col-md-1">
-                    <h6>
-                        follow us
-                    </h6>
-                    <div class="social-icons">
-                        <a><i class="fab fa-facebook"></i></a>
-                        <a><i class="fab fa-twitter"></i></a>
-                        <a><i class="fab fa-instagram"></i></a>
-                    </div>
+
+            </div>
+            <div class="col-md-1">
+                <h6>
+                    follow us
+                </h6>
+                <div class="social-icons">
+                    <a><i class="fab fa-facebook"></i></a>
+                    <a><i class="fab fa-twitter"></i></a>
+                    <a><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>

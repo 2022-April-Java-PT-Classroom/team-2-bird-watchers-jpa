@@ -386,48 +386,6 @@ main .range{
 
  }
 
-/*-----------------about us---------------------*/
-
-/*.card{
-    margin: 1em 1em 1em 1em;
-
-}
-.card img{
-    max-height: 400px;
-    max-width: 400px;
-    object-fit: cover;
-    margin: 1em 1em 1em 1em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
- }
-
- .card img{
-     margin: 1em 1em;
-     border-radius: 12px;
-     padding: 0;
-
- }
-
- .card {
-    flex: 0 0 300px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    5px 5px 15px 5px rgba(0,0,0,0);
-    box-shadow: 0px 10px 13px -7px #000000,
-    5px 5px 15px 5px rgba(0,0,0,0);
-
- }*/
-
  .mission{
       align-items: center;
       text-align: center;
@@ -508,6 +466,49 @@ main .range{
 }
 /*-----------------about us---------------------*/
 
+/*----------------countries-------------------*/
+
+.countries{
+      align-items: center;
+      text-align: center;
+      padding-left: 8rem;
+      padding-right: 8rem;
+ }
+ .countries h1{
+    text-align:center;
+    color:#551a8b;
+ }
+ .countries h1 hr{
+   width:15%;
+   border-top:2px solid #000;
+   background-color:transperant;
+   border-bottom:none;
+   margin-bottom:50px;
+ }
+ 
+/*------x----------countries-------------------*/
+
+/*---------------regions-------------------*/
+
+.regions{
+      align-items: center;
+      text-align: center;
+      padding-left: 8rem;
+      padding-right: 8rem;
+ }
+ .regions h1{
+    text-align:center;
+    color:#551a8b;
+ }
+ .regions h1 hr{
+   width:15%;
+   border-top:2px solid #000;
+   background-color:transperant;
+   border-bottom:none;
+   margin-bottom:50px;
+ }
+
+/*------x----------regions-------------------*/
 
 /*-----------------footer---------------------*/
 footer {

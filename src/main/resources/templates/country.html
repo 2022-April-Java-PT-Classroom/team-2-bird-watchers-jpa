@@ -43,6 +43,7 @@
 
 <!--X---------------main----------------------->
 <main>
+
     <div class="title" th:text="'Country: '+ ${country.countryName} "></div>
     <div class="content">
         <ul>
@@ -51,7 +52,6 @@
         </ul>
     </div>
 
-    <div class="title">Popular Destinations</div>
     <div class="box-container-country">
         <!--1------------->
         <div class="box-country"  th:each="country :${countries}">
@@ -60,7 +60,7 @@
             <p class="details" th:text="${country.region}"></p>
             <p class="details" th:text="${country.habitat}"></p>
 
-            <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
+            <a th:href=" '/countries/' + ${country.id} " ><button th:text="'Learn More'"></button></a>
 
         </div>
     </div>
@@ -73,10 +73,9 @@
                 <h6>
                     Jac <strong>Enterprise</strong>
                 </h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quaerat inventore,
-                    excepturi esse voluptates et quae ut optio quibusdam,
+                <p>Our mission at Jac Enterprise is the conservation of birds and their habitats.
                 </p>
-                <p>eligendi libero modi nisi aut veniam obcaecati? Dolorem minima quae dolore!</p>
+                <p> Together, we are improving native bird populations, the land and the lives of people.</p>
                 <p>©2022 Copyright WCCI Team 2</p>
             </div>
             <div class="col-md-1">
@@ -86,7 +85,7 @@
                     </h6>
                     <div>
 
-                        <p> <strong>Address</strong><br> bird paradise <br> 120 ca 15th avenue-suite, usa</p>
+                        <p> <strong>Address</strong><br> Bird Paradise <br> 120 ca 15th avenue-suite, usa</p>
                     </div>
                     <div>
 
@@ -97,7 +96,7 @@
                     </div>
                     <div>
 
-                        <p><strong>Email address</strong> <br> support@birds.com</p>
+                        <p><strong>Email address</strong> <br> support@JEbirds.com</p>
                     </div>
                 </div>
 
