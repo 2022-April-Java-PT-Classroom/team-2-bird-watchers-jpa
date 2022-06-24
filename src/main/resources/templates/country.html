@@ -43,6 +43,7 @@
 
 <!--X---------------main----------------------->
 <main>
+
     <div class="title" th:text="'Country: '+ ${country.countryName} "></div>
     <div class="content">
         <ul>
@@ -51,7 +52,6 @@
         </ul>
     </div>
 
-    <div class="title">Popular Destinations</div>
     <div class="box-container-country">
         <!--1------------->
         <div class="box-country"  th:each="country :${countries}">
@@ -60,7 +60,7 @@
             <p class="details" th:text="${country.region}"></p>
             <p class="details" th:text="${country.habitat}"></p>
 
-            <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
+            <a th:href=" '/countries/' + ${country.id} " ><button th:text="'Learn More'"></button></a>
 
         </div>
     </div>

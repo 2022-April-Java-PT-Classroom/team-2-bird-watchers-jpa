@@ -304,7 +304,12 @@ main .range {
     justify-content: space-between;
     flex-direction: row;
     /*flex-wrap: wrap;*/
+
+.title{
+    text-align: center;
 }
+}
+
 
 .center{
     text-align:center;
@@ -464,9 +469,28 @@ main .range {
    border-bottom:none;
    margin-bottom:50px;
  }
-
-
 /*------x----------countries-------------------*/
+/*---------------regions-------------------*/
+.regions{
+      align-items: center;
+      text-align: center;
+      padding-left: 8rem;
+      padding-right: 8rem;
+ }
+ .regions h1{
+    text-align:center;
+    color:#551a8b;
+ }
+ .regions h1 hr{
+   width:15%;
+   border-top:2px solid #000;
+   background-color:transperant;
+   border-bottom:none;
+   margin-bottom:50px;
+ }
+
+/*------x----------regions-------------------*/
+
 /*-----------------footer---------------------*/
 footer {
     background-size: cover;
