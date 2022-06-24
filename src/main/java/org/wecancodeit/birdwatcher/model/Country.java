@@ -16,7 +16,11 @@ public class Country extends Region{
     private String region;
     private String habitat;
 
+    @ManyToOne
+    private Travel travel;
 
+    @ManyToOne
+    private Bird bird;
 
     public Long getId() {
 
@@ -53,6 +57,7 @@ public class Country extends Region{
 
         return habitat;
     }
+
 
     @Override
     public String toString() {

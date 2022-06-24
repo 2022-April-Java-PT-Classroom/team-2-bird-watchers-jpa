@@ -43,23 +43,6 @@
     </header>
 
 <!--X---------------main----------------------->
-    <main>
-
-
-
-        <div class="birds">
-
-            <div class="bird" th:each="bird :${birds}">
-                <h3 th:text="${bird.birdName}">Black Winged Kite</h3>
-                <a th:href="'/birds/' + ${bird.id} "><img th:src="${bird.imageUrl}"
-                                                          th:title="${bird.birdName}" alt="${bird.birdName}"
-                                                          width="250" class="img-left"></a>
-            </div>
-
-
-
-
-<!--X---------------main----------------------->
 <main>
 
     <div class="title">Birds</div>

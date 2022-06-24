@@ -13,6 +13,9 @@ public class Region {
     private String region;
     private String habitat;
 
+    @ManyToOne
+    private Travel travel;
+
     public Long getId() {
         return id;
     }
@@ -37,6 +40,23 @@ public class Region {
     public String getHabitat() {
         return habitat;
     }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
+    }
+
+    public Travel getTravel() {
+        return travel;
+    }
+
+    public void setTravel(Travel travel) {
+        this.travel = travel;
+    }
+
     @Override
     public String toString() {
         return "Region{" +

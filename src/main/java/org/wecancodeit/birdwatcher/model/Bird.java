@@ -17,6 +17,9 @@ public class Bird {
     @ManyToMany
     private Collection<Country> countries;
 
+   @ManyToOne
+   private Travel travel;
+
 //    @ManyToMany
 //    private Collection<Region> regions;
 
@@ -61,6 +64,14 @@ public class Bird {
     public String getDescription() {
         return description;
     }
+
+//    public Travel getTravel() {
+//        return travel;
+//    }
+//
+//    public void setTravel(Travel travel) {
+//        this.travel = travel;
+//    }
 
     public Collection<Country> getCountries() {
         return countries;
