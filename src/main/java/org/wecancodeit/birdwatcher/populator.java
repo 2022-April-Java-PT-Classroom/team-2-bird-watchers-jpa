@@ -4,11 +4,16 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancodeit.birdwatcher.model.Bird;
 import org.wecancodeit.birdwatcher.model.Country;
+import org.wecancodeit.birdwatcher.model.Region;
+import org.wecancodeit.birdwatcher.model.Travel;
 import org.wecancodeit.birdwatcher.repo.BirdRepository;
 import org.wecancodeit.birdwatcher.repo.CountryRepository;
 import org.wecancodeit.birdwatcher.repo.RegionRepository;
+import org.wecancodeit.birdwatcher.repo.TravelRepository;
 
 import javax.annotation.Resource;
+import java.util.Calendar;
+import java.util.Date;
 
 @Component
 public class populator implements CommandLineRunner {
@@ -19,10 +24,15 @@ public class populator implements CommandLineRunner {
     private RegionRepository regionStorage;
     @Resource
     private BirdRepository birdStorage;
+    @Resource
+    private TravelRepository travelStorage;
 
 
     @Override
     public void run(String... args) throws Exception {
+
+        Region region1 = new Region( "Central America", "Forest");
+        Region region2 = new Region( "North Asia", "Wetlands");
 
         Country countryOne = new Country("Thailand", "Central", "Forest");
 
@@ -125,6 +135,17 @@ public class populator implements CommandLineRunner {
         birdStorage.save(roller);
         birdStorage.save(broadbill);
         birdStorage.save(pheasant);
+
+        //------------Travel
+
+        Date date = Calendar.getInstance().getTime();
+        Travel travel1 = new Travel("Louis", date, "wishes: Need to watch for long time 5-7 hours", countryOne/*,  region2*/);
+        travel1.addBird(crane);
+        travelStorage.save(travel1);
+
+        Travel travel2 = new Travel("Arnauld", date, "wishes: Please organise the excursion before midday", countryTwo/*,  region1*/);
+        travel2.addBird(hornbill);
+        travelStorage.save(travel2);
 
 
     }

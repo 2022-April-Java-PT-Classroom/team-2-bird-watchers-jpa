@@ -40,16 +40,71 @@
 
     <!--X----------------Nav Bar----------------------->
 </header>
+<!--X---------------main----------------------->
 <main>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</main>
+    <div class="title">Book your Excursion</div>
+    <div class="content range-country">
 
+        <form action="/travel/addTravel" method="post">
+            <table>
+                <tr>
+                    <td>Date</td>
+                    <td><input name="date" type="date"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input name="userName" ></td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td><select name="countryId">
+                        <option th:each="country :${countries}" th:value="${country.id}"
+                                th:text="${country.countryName} + ' - '
+                                + ${country.region}+ ' - ' + ${country.habitat}">
+                        </option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Birds</td>
+                    <td><select name="birdsId" multiple>
+                        <option th:each="bird :${birds}" th:value="${bird.id}"
+                                th:text="${bird.birdName}">
+                        </option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Wishes</td>
+                    <td><textarea name="wishes" placeholder="Wishes" class="form-width form-height"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" id="submit" value="Send"></td>
+                </tr>
+            </table>
+        </form>
+
+        <div  th:each="travel :${travels}" class="travel-result">
+            <span th:text="${travel.date}"></span><br>
+            <span th:text="'Name: ' + ${travel.userName}"></span>
+        </div>
+
+
+    </div>
+
+    <div class="title">Popular Destinations</div>
+    <div class="box-container-country">
+        <!--1------------->
+        <div class="box-country"  th:each="country :${countries}">
+            <span><i class="fa fa-map-marker"></i></span>
+            <p class="heading" th:text="${country.countryName}"></p>
+            <p class="details" th:text="${country.region}"></p>
+            <p class="details" th:text="${country.habitat}"></p>
+
+            <a th:href=" '/countries/' + ${country.id} " > <button th:text="'Learn More'"></button></a>
+
+        </div>
+    </div>
+</main>
 
 <!--X---------------footer----------------------->
 <footer>

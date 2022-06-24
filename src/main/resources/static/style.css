@@ -328,7 +328,33 @@ main .range{
      justify-content: space-between;
      /*flex-wrap: wrap;*/
 }
+form td{
+ padding:5px 20px;
+}
+form input, select, textarea{
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
 
+}
+form #submit{
+    cursor:pointer;
+    background:#fff;
+}
+form #submit:hover{
+    background:#eee;
+}
+.travel-result{
+    margin:30px;
+    padding: 20px;
+    background: #eee;
+    box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+}
+main div div span {
+    font-text: 12px;
+    color: #666;
+}
 .center{
     text-align:center;
 }
